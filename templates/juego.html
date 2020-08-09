@@ -15,7 +15,7 @@
       color: orange;
     }
 
-  
+
 
     @media (max-width: 768px) {
       .carousel-inner .carousel-item > div {
@@ -34,20 +34,20 @@
 
   /* display 3 */
   @media (min-width: 768px) {
-      
+
       .carousel-inner .carousel-item-right.active,
       .carousel-inner .carousel-item-next {
         transform: translateX(33.333%);
       }
-      
-      .carousel-inner .carousel-item-left.active, 
+
+      .carousel-inner .carousel-item-left.active,
       .carousel-inner .carousel-item-prev {
         transform: translateX(-33.333%);
       }
   }
 
   .carousel-inner .carousel-item-right,
-  .carousel-inner .carousel-item-left{ 
+  .carousel-inner .carousel-item-left{
     transform: translateX(0);
   }
 
@@ -55,23 +55,23 @@
     font-size: 25px;
   }
 
-    
-   
+
+
 
   </style>
 
 </head>
-  
-  
+
+
   <body>
 
-    
+
     <div class="container text-center t-4">
 
-      <div class="container pt-5"></div>      
+      <div class="container pt-5"></div>
       <h1>Juego Multiplicando Enteros</h1><br>
-      
-      <img src=imgs/play.JPG class="img-thumbnail">
+
+      <img src=../static/images/play.JPG class="img-thumbnail">
 
       <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-play"></i> Jugar </button>
       <div class="container pt-5"></div>
@@ -108,7 +108,7 @@
 
                 </p>
 
-                
+
               </div>
               <div align="left" class=instrucciones>
                 <h4>Instrucciones</h4>
@@ -124,9 +124,9 @@
         </div>
       </div>
 
-      
 
-      
+
+
 
       <div class="container pt-5"></div>
 
@@ -136,44 +136,44 @@
                 <div class="carousel-inner w-100" role="listbox">
                     <div class="carousel-item active">
                         <div class="col-md-4">
-                            
-                                <img class="img-fluid" src="imgs/v1.JPG">
-                            
+
+                                <img class="img-fluid" src="../static/images/v1.JPG">
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="col-md-4">
-                            
-                                <img class="img-fluid" src="imgs/v2.JPG">
-                            
+
+                                <img class="img-fluid" src="../static/images/v2.JPG">
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="col-md-4">
-                            
-                                <img class="img-fluid" src="imgs/v3.JPG">
-                            
+
+                                <img class="img-fluid" src="../static/images/v3.JPG">
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="col-md-4">
-                            
-                                <img class="img-fluid" src="imgs/v4.JPG">
-                            
+
+                                <img class="img-fluid" src="../static/images/v4.JPG">
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="col-md-4">
-                            
-                                <img class="img-fluid" src="imgs/v3.JPG">
-                            
+
+                                <img class="img-fluid" src="../static/images/v3.JPG">
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="col-md-4">
                             <!--<div class="card card-body">-->
-                                <img class="img-fluid" src="imgs/v2.JPG">
-                            
+                                <img class="img-fluid" src="../static/images/v2.JPG">
+
                         </div>
                     </div>
                 </div>
@@ -192,9 +192,9 @@
       <div class="container pt-5"></div>
 
 
-      
 
-      
+
+
     </div>
     <script>
       $('#recipeCarousel').carousel({
@@ -208,13 +208,13 @@
           next = $(this).siblings(':first');
           }
           next.children(':first-child').clone().appendTo($(this));
-          
+
           for (var i=0;i<minPerSlide;i++) {
               next=next.next();
               if (!next.length) {
                 next = $(this).siblings(':first');
               }
-              
+
               next.children(':first-child').clone().appendTo($(this));
             }
       });
@@ -222,7 +222,7 @@
     </script>
 
 
-  
-  
+
+
   </body>
   </html>
