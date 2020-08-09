@@ -1,0 +1,19 @@
+html, body {
+   height:100%;
+}
+
+body {
+   background: url(../images/background_space.png) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.contenedor{
+  background-color:#ffffffeb!important;
+  height: 100vh;
+}
+.center {
+padding-top:15%!important;
+}

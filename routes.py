@@ -5,15 +5,15 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index.html')
 def index():
-    return render_template('index.html', the_title='Tiger Home Page')
+    return render_template('index.html', the_title='Edubot Home Page')
 
-@app.route('/symbol.html')
-def symbol():
-    return render_template('symbol.html', the_title='Tiger As Symbol')
+@app.route('/login.html')
+def login():
+    return render_template('login.html', the_title='Login')
 
-@app.route('/myth.html')
-def myth():
-    return render_template('myth.html', the_title='Tiger in Myth and Legend')
+@app.route('/signin.html')
+def signin():
+    return render_template('signin.html', the_title='Registrate')
 
 if __name__ == '__main__':
     app.run(debug=True)

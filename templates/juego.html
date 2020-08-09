@@ -1,0 +1,228 @@
+
+<html>
+  <head>
+    <!-- CSS de bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .checked {
+      color: orange;
+    }
+
+  
+
+    @media (max-width: 768px) {
+      .carousel-inner .carousel-item > div {
+          display: none;
+      }
+      .carousel-inner .carousel-item > div:first-child {
+          display: block;
+      }
+  }
+
+  .carousel-inner .carousel-item.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+      display: flex;
+  }
+
+  /* display 3 */
+  @media (min-width: 768px) {
+      
+      .carousel-inner .carousel-item-right.active,
+      .carousel-inner .carousel-item-next {
+        transform: translateX(33.333%);
+      }
+      
+      .carousel-inner .carousel-item-left.active, 
+      .carousel-inner .carousel-item-prev {
+        transform: translateX(-33.333%);
+      }
+  }
+
+  .carousel-inner .carousel-item-right,
+  .carousel-inner .carousel-item-left{ 
+    transform: translateX(0);
+  }
+
+  .fa {
+    font-size: 25px;
+  }
+
+    
+   
+
+  </style>
+
+</head>
+  
+  
+  <body>
+
+    
+    <div class="container text-center t-4">
+
+      <div class="container pt-5"></div>      
+      <h1>Juego Multiplicando Enteros</h1><br>
+      
+      <img src=imgs/play.JPG class="img-thumbnail">
+
+      <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-play"></i> Jugar </button>
+      <div class="container pt-5"></div>
+
+      <div class="card-deck" >
+        <div class="card" style="background-color:#83d6eb;">
+          <div class="card-body text-center" >
+            <p class="card-text">
+                <h4 align="left">Descripción</h4>
+                <p align="left">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec nisl tincidunt, pulvinar est at, sollicitudin orci. Morbi vel accumsan elit. Aliquam tempus ligula eget nisl varius, sed dictum elit vulputate. Sed a convallis leo, in dictum metus. Ut elementum bibendum neque sed venenatis.
+                </p>
+                <h4 align="left">Competencias</h4>
+                <p align="left">
+                  In eu felis porta, convallis neque id, rutrum nunc. Curabitur non convallis est, ac egestas lorem. Cras aliquam suscipit mauris vel gravida. In tempus erat lectus, vel mattis sem pellentesque a. Vivamus augue risus, luctus at tempor a, cursus quis lorem.
+                </p>
+                <h4 align="left">Nivel</h4>
+                <p align="left">Primero de Básica</p>
+
+            </p>
+          </div>
+        </div>
+        <div class="card" style="background-color:#ebe983;">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <div align="left" class="valoracion" >
+                <h4>Valoración</h4>
+                <p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+
+                </p>
+
+                
+              </div>
+              <div align="left" class=instrucciones>
+                <h4>Instrucciones</h4>
+                <li>Sed elementum nunc lacinia ligula hendrerit, quis tempor dolor malesuada.</li>
+                <li>Phasellus semper nibh non ex euismod, quis consectetur lorem vehicula.</li>
+                <li>Praesent laoreet libero malesuada ultrices eleifend.</li>
+                <li>Fusce id libero in massa feugiat ultrices.</li>
+                <li>Vestibulum vel tortor pretium, scelerisque sem non, lobortis libero.</li>
+              </div>
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+
+      <div class="container pt-5"></div>
+
+      <div class="container text-center my-3">
+        <div class="row mx-auto my-auto">
+            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                <div class="carousel-inner w-100" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            
+                                <img class="img-fluid" src="imgs/v1.JPG">
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            
+                                <img class="img-fluid" src="imgs/v2.JPG">
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            
+                                <img class="img-fluid" src="imgs/v3.JPG">
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            
+                                <img class="img-fluid" src="imgs/v4.JPG">
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            
+                                <img class="img-fluid" src="imgs/v3.JPG">
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <!--<div class="card card-body">-->
+                                <img class="img-fluid" src="imgs/v2.JPG">
+                            
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+      </div>
+
+      <div class="container pt-5"></div>
+
+
+      
+
+      
+    </div>
+    <script>
+      $('#recipeCarousel').carousel({
+        interval: 10000
+      })
+
+      $('.carousel .carousel-item').each(function(){
+          var minPerSlide = 3;
+          var next = $(this).next();
+          if (!next.length) {
+          next = $(this).siblings(':first');
+          }
+          next.children(':first-child').clone().appendTo($(this));
+          
+          for (var i=0;i<minPerSlide;i++) {
+              next=next.next();
+              if (!next.length) {
+                next = $(this).siblings(':first');
+              }
+              
+              next.children(':first-child').clone().appendTo($(this));
+            }
+      });
+
+    </script>
+
+
+  
+  
+  </body>
+  </html>
