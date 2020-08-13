@@ -15,5 +15,13 @@ def login():
 def signin():
     return render_template('signin.html', the_title='Registrate')
 
+@app.route('/juego.html')
+def juego():
+    return render_template('juego.html', the_title='Juego')
+
+@app.route('/statistics.html')
+def statistics():
+    return render_template('statistics.html', the_title='Estadisticas')
+
 if __name__ == '__main__':
     app.run(debug=True)
