@@ -1,6 +1,6 @@
-
-<html>
-  <head>
+{% extends "base.html" %}
+{% block content %}
+  
     <!-- CSS de bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -55,26 +55,51 @@
     font-size: 25px;
   }
 
+  .cont-portada .btn {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #f8cb03;
+      color: rgb(12, 1, 1);
+      font-size: 25px;
+      padding: 12px 60px;
+      border: none;
+      cursor: pointer;
+      border-radius: 40px;
+      text-align: center;
+      box-shadow: 0 4px rgb(153, 153, 153);
+
+  }
+
+  .cont-portada .btn:hover {
+      background-color: rgb(240, 227, 51);
+  }
+    
+  .cont-portada .btn:active {
+      background-color: rgb(240, 227, 51);
+      box-shadow: 0 4px #666;
+  }
 
 
 
   </style>
 
-</head>
 
 
-  <body>
 
-
-    <div class="container text-center t-4">
+  <div class="contenedor">
+    
 
       <div class="container pt-5"></div>
       <h1>Juego Multiplicando Enteros</h1><br>
+      <div class="cont-portada">
+        <img src=../static/images/play.JPG class="img-thumbnail">
 
-      <img src=../static/images/play.JPG class="img-thumbnail">
-
-      <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-play"></i> Jugar </button>
-      <div class="container pt-5"></div>
+        <a href="#" class="btn"><i class="fas fa-play"></i> Jugar </a>
+      </div>
+        <div class="container pt-5"></div>
 
       <div class="card-deck" >
         <div class="card" style="background-color:#83d6eb;">
@@ -220,9 +245,8 @@
       });
 
     </script>
+  </div>
+{% endblock %}
 
 
 
-
-  </body>
-  </html>
