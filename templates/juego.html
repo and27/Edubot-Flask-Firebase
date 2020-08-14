@@ -24,63 +24,112 @@
       .carousel-inner .carousel-item > div:first-child {
           display: block;
       }
-  }
+    }
 
-  .carousel-inner .carousel-item.active,
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev {
-      display: flex;
-  }
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
 
-  /* display 3 */
-  @media (min-width: 768px) {
+    /* display 3 */
+    @media (min-width: 768px) {
 
-      .carousel-inner .carousel-item-right.active,
-      .carousel-inner .carousel-item-next {
-        transform: translateX(33.333%);
-      }
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+          transform: translateX(33.333%);
+        }
 
-      .carousel-inner .carousel-item-left.active,
-      .carousel-inner .carousel-item-prev {
-        transform: translateX(-33.333%);
-      }
-  }
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+          transform: translateX(-33.333%);
+        }
+    }
 
-  .carousel-inner .carousel-item-right,
-  .carousel-inner .carousel-item-left{
-    transform: translateX(0);
-  }
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left{
+      transform: translateX(0);
+    }
 
-  .fa {
-    font-size: 25px;
-  }
-
-  .cont-portada .btn {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      background-color: #f8cb03;
-      color: rgb(12, 1, 1);
+    .fa {
       font-size: 25px;
-      padding: 12px 60px;
-      border: none;
-      cursor: pointer;
-      border-radius: 40px;
+    }
+
+    .img-wrapper {
+      position: relative;
+    }
+
+    .img-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       text-align: center;
-      box-shadow: 0 4px rgb(153, 153, 153);
+    }
 
-  }
+    .img-overlay:before {
+      content: ' ';
+      display: block;
+      /* adjust 'height' to position overlay content vertically */
+      height: 70%;
+    }
 
-  .cont-portada .btn:hover {
-      background-color: rgb(240, 227, 51);
-  }
-    
-  .cont-portada .btn:active {
-      background-color: rgb(240, 227, 51);
-      box-shadow: 0 4px #666;
-  }
+    @media (min-width: 768px) {
+      .btn {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #f8cb03;
+          color: rgb(12, 1, 1);
+          font-size: 25px;
+          padding: 12px 60px;
+          border: none;
+          cursor: pointer;
+          border-radius: 40px;
+          text-align: center;
+          box-shadow: 0 4px rgb(153, 153, 153);
+
+      }
+
+      .btn:hover {
+          background-color: rgb(240, 227, 51);
+      }
+        
+      .btn:active {
+          background-color: rgb(240, 227, 51);
+          box-shadow: 0 4px #666;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .btn {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #f8cb03;
+          color: rgb(12, 1, 1);
+          font-size: 20px;
+          padding: 6px 25px;
+          border: none;
+          cursor: pointer;
+          border-radius: 40px;
+          text-align: center;
+          box-shadow: 0 4px rgb(153, 153, 153);
+
+      }
+
+      .btn:hover {
+          background-color: rgb(240, 227, 51);
+      }
+        
+      .btn:active {
+          background-color: rgb(240, 227, 51);
+          box-shadow: 0 4px #666;
+      }
+    }
+
+ 
 
 
 
@@ -94,12 +143,14 @@
 
       <div class="container pt-5"></div>
       <h1>Juego Multiplicando Enteros</h1><br>
-      <div class="cont-portada">
-        <img src=../static/images/play.JPG class="img-thumbnail">
-
-        <a href="#" class="btn"><i class="fas fa-play"></i> Jugar </a>
+      
+      <div class="img-wrapper">
+        <img class="img-thumbnail" src="../static/images/play.JPG">
+        <div class="img-overlay">
+          <a href="#" class="btn btn-md"><i class="fas fa-play"></i> Jugar </a></a>
+        </div>
       </div>
-        <div class="container pt-5"></div>
+      <div class="container pt-5"></div>
 
       <div class="card-deck" >
         <div class="card" style="background-color:#83d6eb;">
