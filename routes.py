@@ -7,19 +7,19 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', the_title='Edubot Home Page')
 
-@app.route('/login.html')
+@app.route('/login')
 def login():
     return render_template('login.html', the_title='Login')
 
-@app.route('/signin.html')
+@app.route('/signin')
 def signin():
     return render_template('signin.html', the_title='Registrate')
 
-@app.route('/juego.html')
+@app.route('/juego')
 def juego():
     return render_template('juego.html', the_title='Juego')
 
-@app.route('/statistics.html')
+@app.route('/statistics')
 def statistics():
     return render_template('statistics.html', the_title='Estadisticas')
 
