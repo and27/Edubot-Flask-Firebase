@@ -5,7 +5,7 @@ from firebase_admin import credentials, firestore, initialize_app
 from responses.responses import bad_request, response
 
 # Initialize Flask App
-# app = Flask(__name__)
+app = Flask(__name__)
 # Initialize Firestore DB
 cert_file = "here_the_json_withyourfirestore_credentials"
 cred = credentials.Certificate(cert_file)
@@ -65,6 +65,8 @@ def delete_school():
  except Exception as e:
   return bad_request()
 
+app.register_blueprint(edubot)
+
 port = int(os.environ.get('PORT', 5050))
 if __name__ == '__main__':
-    edubot.run(threaded=True, host='0.0.0.0', port=port, debug=True)
+    app.run(threaded=True, host='0.0.0.0', port=port, debug=True)
