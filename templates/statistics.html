@@ -1,53 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
-    <!-- CSS de bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+
   <style>
     .img-fluid{
       max-width: 10%;
-
     }
 
   </style>
 
 
 
-  <div class="contenedor">
+  <div class="contenedor text-center">
     
 
     
         <div class="container pt-5"></div>
-        <h1>Estadísticas</h1>
+        <h1 class="tittle">Estadísticas</h1>
         <div class="container pt-5"></div>
 
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card bg-info">
                       <div class="card-body" align="left">
                         <h2><span class="badge badge-warning"> Jugador </span></h2>
-                        <p class="card-text"><b style="color:#ffffff";>Nombre:</b> Carlos Ponce</p>
-                        <p class="card-text"><b style="color:#ffffff";>Edad:</b> 7 años</p>
-                        <p class="card-text"><b style="color:#ffffff";>Datos:</b> Unidad Educativa "Ibarra"</p>
+                        <p class="card-text"><b style="color:#ffffff">Nombre:</b> Carlitos</p>
+                        <p class="card-text"><b style="color:#ffffff">Edad:</b> 7 años</p>
+                        <p class="card-text"><b style="color:#ffffff">Datos:</b> Unidad Educativa "Ibarra"</p>
                       </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-8" style="background-color:#94ccf1;">
-
-              <div class="descripcion">
+            <div class="col-md-8" >
+		
+              <div class="descripcion" >
                 <h4 align="left">Puntuación</h4>
                 <p align="left">
                     100/200
@@ -57,9 +45,9 @@
               <div align="left" class="dificultad">
                 <h4 align="left">Banderas</h4>
                   <div>
-                    <img class="img-fluid" src="../static/images/medalla1.png">
-                    <img class="img-fluid" src="../static/images/medalla2.png">
-                    <img class="img-fluid" src="../static/images/medalla4.png">
+                    <img class="img-fluids" src="../static/images/medalla1.png">
+                    <img class="img-fluids" src="../static/images/medalla2.png">
+                    <img class="img-fluids" src="../static/images/medalla4.png">
                   </div>
               </div>
 
@@ -68,7 +56,7 @@
         </div>
         <div class="container pt-5"></div>
 
-        <h2 align="left">Días Jugados</h2>
+        <h2>Días Jugados</h2>
         <img src="../static/images/dias.png" class="img-thumbnail">
 
         <div class="container pt-5"></div>

@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="contenedor text-center pt-5" style="height:100vw">
+		<h1 class="tittle">Regístrate en Edubot</h1>
+		<p>Ingresa tu información para crear una cuenta</p>
 
-		<h1>Registrate en Edubot!</h1>
-		<p>Ingresa tu informacion para crear una cuenta</p>
-
+		<div class="row">
+		<div class="col col-md-6 offset-md-3">
 		<div class="form-group">
 			<div class="pt-3"><input type="text" class="form-control" id="name" placeholder="Nombre y Apellido"></div>
     <div class="pt-3"><input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Nombre de usuario"></div>
@@ -13,12 +15,15 @@
 
 	<div class="pt-3">
 	<label>
-			<input type="checkbox" checked="checked" name="remember"> Acepto los <a href="#">terminos y condiciones</a>
+			<input type="checkbox" checked="checked" name="remember"> Acepto los <a href="#">términos y condiciones</a>
 		</label>
 	</div>
 
-  <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-warning form-control" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Registrate
   </button>
+  </div>
+ </div>
+</div>
 
 {% endblock %}
