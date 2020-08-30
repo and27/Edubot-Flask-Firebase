@@ -12,8 +12,20 @@ body {
 
 .contenedor{
   background-color:#ffffffeb!important;
-  height: 100vh;
+  height: 100%;
 }
 .center {
 padding-top:15%!important;
 }
+
+.tittle{
+	font-family: 'Asap', sans-serif;
+	font-weight: 700;
+    color: #0c83ab;
+	letter-spacing: 1.5px;
+}
+
+ .img-fluids{
+      max-width: 10%;
+    }
+

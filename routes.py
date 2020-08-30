@@ -19,9 +19,18 @@ def signin():
 def juego():
     return render_template('juego.html', the_title='Juego')
 
-@app.route('/statistics')
-def statistics():
-    return render_template('statistics.html', the_title='Estadisticas')
+	
+@app.route('/perfil')
+def perfil():
+    return render_template('statistics.html', the_title='Juego Líneas')
+	
+@app.route('/ranking')
+def ranking():
+    return render_template('ranking.html', the_title='Juego Líneas')
+	
+@app.route('/game_lines')
+def game_lines():
+    return render_template('game_lines.html', the_title='Juego Líneas')
 
 if __name__ == '__main__':
     app.run(debug=True)
