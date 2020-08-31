@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="contenedor text-center pt-5" style="height:100vw">
+<div class="contenedor text-center" style="height:100vw;position:relative; padding-top:10%">
 
 		<h1 class="tittle" >Bienvenido a Edubot</h1>
 		<p>Inserta tus credenciales para acceder</p>
-
+	<div>
+		<img src="../static/images/oso_2.png" width="15%" style="z-index:1; position:absolute; top:10vw; left:5vw;" >
+	</div>
 	<div class="row">
 	<div class="col col-md-6 offset-md-3">
 	<div class="form-group">
 		<div class="pt-3"><input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Nombre de usuario"></div>
 		<div class="pt-3"><input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Contraseña"></div>
 	</div>
-	 <button class="btn btn-warning form-control" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	 <button class="btn btn-primary form-control" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Ingresa
   </button>
   <div class="pt-3">
