@@ -8,7 +8,7 @@
 
 </head>
   <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5">
 	  <!-- <a class="navbar-brand" href="#">Edubot</a> -->
 	  <a class="navbar-brand" href="{{url_for('index')}}">
     	<img src="../static/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Edubot
@@ -17,28 +17,39 @@
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
-	    {% if  session.logged_in %}
-	    <ul class="navbar-nav mr-auto">
-
+	    {% if not session.logged_in %}
+	  
+  <ul class="navbar-nav mr-auto">
 	      <li class="nav-item">
-	        <a class="nav-link" href="{{ url_for('juego') }}">Juego</a>
+	        <a class="nav-link" href="{{ url_for('juego') }}">Juegos</a>
 	      </li>
-		  <li class="nav-item">
-	        <a class="nav-link" href="{{ url_for('perfil') }}">Perfil</a>
+	</ul>
+	    
+			
+		<ul class="navbar-nav">
+			<li class="nav-item">
+	        <a class="nav-link" href="{{ url_for('login') }}">Inicia sesión</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="{{ url_for('signin') }}">Únete gratis</a>
+	      </li>
+		  
+		</ul>
+		{% else %}
+		  <ul class="navbar-nav mr-auto">
+		 <li class="nav-item">
+	        <a class="nav-link" href="{{ url_for('juego') }}">Juegos</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="{{ url_for('ranking') }}">Ranking</a>
 	      </li>
-	
-	    </ul>
-			{% elif not session.logged_in %}
-		<ul class="navbar-nav">
+		  </ul>
+		  <ul class="navbar-nav">
 			<li class="nav-item">
-	        <a class="nav-link" href="{{ url_for('login') }}">Ingresar</a>
+	        <a class="nav-link" href="{{ url_for('perfil') }}">Perfil</a>
 	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="{{ url_for('signin') }}">Registro</a>
-	      </li>
+	   
+		  
 		</ul>
 		{% endif %}
 
