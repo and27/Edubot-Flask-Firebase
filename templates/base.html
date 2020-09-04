@@ -8,7 +8,7 @@
 
 </head>
   <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5 nav-color">
 	  <!-- <a class="navbar-brand" href="#">Edubot</a> -->
 	  <a class="navbar-brand" href="{{url_for('index')}}">
     	<img src="../static/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Edubot
@@ -21,11 +21,8 @@
 	  
   <ul class="navbar-nav mr-auto">
 	      <li class="nav-item">
-	        <a class="nav-link" href="{{ url_for('juegos') }}">Juegos</a>
+	        <a class="nav-link" href="{{ url_for('juego') }}">Juegos</a>
 	      </li>
-		<li class="nav-item">
-		<a class="nav-link" href="{{ url_for ('juego')}}">Example</a>
-		</li>
 	</ul>
 	    
 			
