@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="contenedor text-center pt-5" style="height:100vw">
-		<h1 class="tittle">Regístrate en Edubot</h1>
-		<p>Ingresa tu información para crear una cuenta</p>
-
+<div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
+		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+		<h1 class="tittle text-light">Regístrate en Edubot</h1>
+		<p class="text-light" >Ingresa tu información para crear una cuenta</p>
+		</div>
+		<div>
 		{% if s %}
 			<div class="alert alert-success">
 				<h2>{{s}}</h2>

@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="contenedor text-center" style="height:100vw;position:relative; padding-top:10%">
-
-		<h1 class="tittle" >Bienvenido a Edubot</h1>
-		<p>Inserta tus credenciales para acceder</p>
+<div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
+	
+		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+		<h1 class="tittle text-light"  >Bienvenido a Edubot</h1>
+		<p class="text-light" >Inserta tus credenciales para acceder</p>
+		</div>
+		
 		<div>
 			<img src="../static/images/oso_2.png" width="15%" style="z-index:1; position:absolute; top:10vw; left:5vw;" >
 		</div>
@@ -29,7 +32,7 @@
 						<div class="pt-3"><input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Correo"></div>
 						<div class="pt-3"><input type="password" class="form-control" id="passd" name="passd" aria-describedby="emailHelp" placeholder="Contraseña"></div>
 					</div>
-					<button class="btn btn-primary form-control" type="submit" id="buttis" aria-haspopup="true" aria-expanded="false">
+					<button class="btn btn-edubot form-control" type="submit" id="buttis" aria-haspopup="true" aria-expanded="false">
 					Ingresa
 					</button>
 					<div class="pt-3">
