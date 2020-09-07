@@ -4,26 +4,41 @@
 		<h1 class="tittle">Regístrate en Edubot</h1>
 		<p>Ingresa tu información para crear una cuenta</p>
 
-		<div class="row">
-		<div class="col col-md-6 offset-md-3">
-		<div class="form-group">
-			<div class="pt-3"><input type="text" class="form-control" id="name" placeholder="Nombre y Apellido"></div>
-    <div class="pt-3"><input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Nombre de usuario"></div>
-    <div class="pt-3"><input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Contraseña"></div>
-		<div class="pt-3"><input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Repetir Contraseña"></div>
-  </div>
+		{% if s %}
+			<div class="alert alert-success">
+				<h2>{{s}}</h2>
+			</div>
+		{% endif %}
+		
+		{% if us %}
+			<div class="alert alert-danger">
+				<h2>{{us}}</h2>
+			</div>
+		{% endif %}
 
-	<div class="pt-3">
-	<label>
-			<input type="checkbox" checked="checked" name="remember"> Acepto los <a href="#">términos y condiciones</a>
-		</label>
-	</div>
+		<form action="/signin" method="POST">
 
-  <button class="btn btn-primary form-control" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Regístrate
-  </button>
-  </div>
- </div>
+			<div class="row">
+				<div class="col col-md-6 offset-md-3">
+					<div class="form-group">
+						<div class="pt-3"><input type="text" class="form-control" id="name" name="name" placeholder="Nombre y Apellido"></div>
+						<div class="pt-3"><input type="email" class="form-control" id="mail" name="mail" aria-describedby="emailHelp" placeholder="Correo"></div>
+						<div class="pt-3"><input type="password" class="form-control" id="pass" name="pass" aria-describedby="emailHelp" placeholder="Contraseña"></div>
+						<div class="pt-3"><input type="password" class="form-control" id="passr" name="passr" aria-describedby="emailHelp" placeholder="Repetir Contraseña"></div>
+					</div>
+
+					<div class="pt-3">
+					<label>
+							<input type="checkbox" checked="checked" name="remember"> Acepto los <a href="#">términos y condiciones</a>
+						</label>
+					</div>
+
+					<button class="btn btn-primary form-control" type="submit" id="buttonr" aria-haspopup="true" aria-expanded="false">
+						Regístrate
+					</button>
+				</div>
+			</div>
+		</form>
 </div>
 
 {% endblock %}
