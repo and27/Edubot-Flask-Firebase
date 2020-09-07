@@ -1,34 +1,57 @@
 {% extends "base.html" %}
 {% block content %}
 
+<style>
+	img {
+	max-width: 100%;
+	height: auto;
+	}
+</style>
+
+
 <div class="contenedor text-center" style="height:100vw;position:relative; padding-top:10%">
 
 		<h1 class="tittle" >Bienvenido a Edubot</h1>
 		<p>Inserta tus credenciales para acceder</p>
-	<div>
-		<img src="../static/images/oso_2.png" width="15%" style="z-index:1; position:absolute; top:10vw; left:5vw;" >
-	</div>
-	<div class="row">
-	<div class="col col-md-6 offset-md-3">
-	<div class="form-group">
-		<div class="pt-3"><input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Nombre de usuario"></div>
-		<div class="pt-3"><input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Contraseña"></div>
-	</div>
-	 <button class="btn btn-primary form-control" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Ingresa
-  </button>
-  <div class="pt-3">
-  <label>
-      <input type="checkbox" checked="checked" name="remember"> Recuérdame
-    </label>
-  </div>
-  <div class="container">
-    <span class="psw"><a href="#">Olvidaste tu contraseña?</a></span>
-  </div>
-  
-</div>
-</div>
+		<div>
+			<img src="../static/images/oso_2.png" width="15%" style="z-index:1; position:absolute; top:10vw; left:5vw;" >
+		</div>
 
+		{% if s %}
+			<div class="alert alert-success">
+				<h2>{{s}}</h2>
+			</div>
+		{% endif %}
+		
+		{% if us %}
+			<div class="alert alert-danger">
+				<h2>{{us}}</h2>
+			</div>
+		{% endif %}
 
- 
+		<form action="/login" method="POST">
+			<div class="row">
+				<div class="col col-md-6 offset-md-3">
+
+					<div class="form-group">
+						<div class="pt-3"><input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Correo"></div>
+						<div class="pt-3"><input type="password" class="form-control" id="passd" name="passd" aria-describedby="emailHelp" placeholder="Contraseña"></div>
+					</div>
+					<button class="btn btn-primary form-control" type="submit" id="buttis" aria-haspopup="true" aria-expanded="false">
+					Ingresa
+					</button>
+					<div class="pt-3">
+						<label>
+						<input type="checkbox" checked="checked" name="remember"> Recuérdame
+						</label>
+					</div>
+					<div class="container">
+						<span class="psw"><a href="#">Olvidaste tu contraseña?</a></span>
+					</div>
+			
+				</div>
+			</div>
+		</form>
+
+ </div>
 {% endblock %}	
