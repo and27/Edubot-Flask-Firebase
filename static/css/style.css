@@ -1,9 +1,13 @@
-html, body {
-   height:100%;
+html {
+  min-height: 100%;
 }
 
 body {
-   background: url(../images/background_space.png) no-repeat center center fixed;
+  min-height: 100vh;
+}
+
+body {
+   background: url(../images/land_back.png) no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -33,6 +37,12 @@ padding-top:15%!important;
 	color:#0c8ca6;
 }
 
+.main-title{
+	color:white;
+	text-shadow: 0 2px 5px gray;
+	font-weight:400;
+}
+
 .card-white{
 	background-color:white!important;
 	border-radius:1vw!important;
@@ -40,4 +50,15 @@ padding-top:15%!important;
 
 .nav-color{
 	background-image: radial-gradient(circle at 50% 50%,#ffffff3d,#ffffff99 43%,hsla(0,0%,100%,0));
+    box-shadow: 0 4px 20px -4px rgb(0 0 0 / 20%);
+
+}
+
+.btn-edubot{
+	background-color: #0c92a6!important;
+	color:white!important;
+}
+
+.foot-color{
+	background: linear-gradient(59deg, #0ebcba, #0a6992);
 }

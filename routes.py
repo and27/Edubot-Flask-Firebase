@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, session
+from game_dic import game_dic
 import pyrebase
 
 
@@ -59,9 +60,9 @@ def signin():
 
     return render_template('signin.html', the_title='Registrate')
 
-@app.route('/juego')
-def juego():
-    return render_template('juego.html', the_title='Juego')
+@app.route('/juego/<int:i>')
+def juego(i):
+    return render_template('juego_base.html', game_title=game_dic[i]["game_title"], game_competence=game_dic[i]["game_competence"], game_description=game_dic[i]["game_description"], game_image=game_dic[i]["game_image"] )
 
 @app.route('/perfil')
 def perfil():
