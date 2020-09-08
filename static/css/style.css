@@ -41,6 +41,7 @@ padding-top:15%!important;
 	color:white;
 	text-shadow: 0 2px 5px gray;
 	font-weight:400;
+	font-size: 5rem;
 }
 
 .card-white{
@@ -61,4 +62,20 @@ padding-top:15%!important;
 
 .foot-color{
 	background: linear-gradient(59deg, #0ebcba, #0a6992);
+}
+
+  .im_prin {
+    width: 20%;
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .im_prin {
+    width: 30%;
+	
+}
+	.main-title{
+		font-size: 3.5rem;
+	}
 }
