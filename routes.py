@@ -79,6 +79,10 @@ def game_lines():
 @app.route('/juegos')
 def juegos():
     return render_template('search.html', the_title='Búsqueda de Juegos')
+	
+@app.route('/index2')
+def juegos2():
+    return render_template('index2.html', the_title='Búsqueda de Juegos')
 
 
 if __name__ == '__main__':
