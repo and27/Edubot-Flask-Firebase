@@ -7,8 +7,7 @@ from responses.responses import bad_request, response
 # Initialize Flask App
 app = Flask(__name__)
 # Initialize Firestore DB
-cert_file = "here_the_json_withyourfirestore_credentials"
-cred = credentials.Certificate(cert_file)
+cred = credentials.Certificate('edubot-f2362-firebase-adminsdk-k4fzh-6c456bc9e2.json')
 default_app = initialize_app(cred)
 db = firestore.client()
 
@@ -43,10 +42,9 @@ def get_school():
  except Exception as e:
   return bad_request()
 
-@edubot.route('/school', methods=['PUT'])
-def update_school():
+@edubot.route('/school/<id>', methods=['PUT'])
+def update_school(id):
  try:
-  id = request.json['id']
   school_ref.document(id).update(request.json)
   school = school_ref.doument(id).get()
   return response(school.to_dict())
@@ -54,19 +52,19 @@ def update_school():
  except Exception as e:
   return bad_request()
 
-@edubot.route('/school', methods=['DELETE'])
-def delete_school():
- try:
-  school_id = request.args.get('id')
+@edubot.route('/school/<id>', methods=['DELETE'])
+def delete_school(id):
+ # try:
+  school_id = id
   school_ref.document(school_id).delete()
-  school = school_ref.document(id).get()
-  return response(school)
+  # school = school_ref.document(id).get()
+  return response("")
 
- except Exception as e:
-  return bad_request()
+ # except Exception as e:
+ #  return bad_request()
 
 app.register_blueprint(edubot)
 
 port = int(os.environ.get('PORT', 5050))
 if __name__ == '__main__':
-    app.run(threaded=True, host='0.0.0.0', port=port, debug=True)
+  app.run(threaded=True, host='0.0.0.0', port=port, debug=True)
