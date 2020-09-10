@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
+from rank_dic import rank_dic 
 from game_dic import game_dic
+from views.api_player import edubot
 import pyrebase
 
 
@@ -7,14 +9,14 @@ import pyrebase
 app = Flask(__name__)
 
 firebaseConfig = {
-  "apiKey": "AIzaSyA879qkoq7PGHdL3YYhO4LaW-OHmxuLHWY",
-  "authDomain": "webpage-15b17.firebaseapp.com",
-  "databaseURL": "https://webpage-15b17.firebaseio.com",
-  "projectId": "webpage-15b17",
-  "storageBucket": "webpage-15b17.appspot.com",
-  "messagingSenderId": "846775345641",
-  "appId": "1:846775345641:web:5298dd967cd538b3d2ab78",
-  "measurementId": "G-E6XE42VMWC"
+    "apiKey": "AIzaSyCbdZiJXL23Cy3hozapwNzl_QDJ7SQXZYQ",
+    "authDomain": "edubot-f2362.firebaseapp.com",
+    "databaseURL": "https://edubot-f2362.firebaseio.com",
+    "projectId": "edubot-f2362",
+    "storageBucket": "edubot-f2362.appspot.com",
+    "messagingSenderId": "86712690656",
+    "appId": "1:86712690656:web:811feadb6d97dcd3962d85",
+    "measurementId": "G-TRPHQ88HGE"
 }
 
 
@@ -70,7 +72,7 @@ def perfil():
 	
 @app.route('/ranking')
 def ranking():
-    return render_template('ranking.html', the_title='Juego Líneas')
+    return render_template('ranking.html', rank_dic=rank_dic)
 	
 @app.route('/game_lines')
 def game_lines():
@@ -84,6 +86,7 @@ def juegos():
 def juegos2():
     return render_template('index2.html', the_title='Búsqueda de Juegos')
 
+app.register_blueprint(edubot)
 
 if __name__ == '__main__':
     app.run(debug= True)
