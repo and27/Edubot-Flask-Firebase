@@ -2,6 +2,9 @@
 {% extends 'base.html' %}
  
 {% block content %}
+  
+
+
   <div class="contenedor text-center pt-5">
   		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
 
@@ -36,76 +39,21 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Usuario</th>
-      <th scope="col">Paralelo</th>
+      <th scope="col">Escuela</th>
       <th scope="col">Destacado</th>
       <th scope="col">Puntaje</th>
     </tr>
   </thead>
   <tbody>
+  {% for student in rank_dic %}
     <tr>
-      <th scope="row">1</th>
-      <td>mariov</td>
-      <td>A</td>
-      <td>Física</td>
-      <td>100</td>
+      <th scope="row">{{student.rank_position}}</th>
+      <td>{{student.rank_user}}</td>
+      <td>{{student.rank_school}}</td>
+      <td>{{student.rank_game}}</td>
+      <td>{{student.rank_score}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>juanp</td>
-      <td>B</td>
-      <td>Matemáticas</td>
-      <td>98</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>nicolayv</td>
-      <td>C</td>
-      <td>Literatura</td>
-      <td>97</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>pedroc</td>
-      <td>A</td>
-      <td>Matemáticas</td>
-      <td>95</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>jackd</td>
-      <td>C</td>
-      <td>Ciencias Naturales</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>jhonyr</td>
-      <td>A</td>
-      <td>Literatura</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>nicolev</td>
-      <td>A</td>
-      <td>Historia</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>mariap</td>
-      <td>B</td>
-      <td>Matemáticas</td>
-      <td>89</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>juliaj</td>
-      <td>B</td>
-      <td>Ciencias Naturales</td>
-      <td>87</td>
-    </tr>
-
+  {% endfor%}
   </tbody>
     </table>
   </div>
