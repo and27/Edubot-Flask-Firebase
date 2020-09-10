@@ -12,52 +12,147 @@
   box-sizing: border-box;
   }
 
+  .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+
+    .rating-header {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
 </style>
 
 
 	<div class="contenedor text-center pt-4">
 	<div>
 		<h1 class="tittle">Juegos</h1>
-		<p>Busca un juego para comenzar</p>
 
-		<div class="form-group">
-    <input type="text" class="form-control" id="exampleInput" aria-describedby="searchHelp" placeholder="Búsqueda">
-  </div>
+		<p>Busca un juego para comenzar a aprender</p>
 
-	<div class="form-group">
-            <button class="btn btn-primary" type="submit">Search</button>
+  <div class="container h-25">
+      <div class="d-flex justify-content-center h-25">
+        <div class="searchbar">
+          <input class="search_input" type="text" name="" placeholder="Buscar. . .">
+          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
+      </div>
+    </div>
+
+
 </div>
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6">
       <div class="contenedor">
-        <img src="https://larepublica.pe/resizer/4ya3gAsiWOmXsJbzyugqOvv1iFg=/646x380/top/smart/arc-anglerfish-arc2-prod-gruporepublica.s3.amazonaws.com/public/S7FCFMXCFNBYDGNRHQMPOC7HFY.png" class="rounded" alt="Eniun" width="300" height="300" />
-        <div id="sidebar">
-          <ul>
-            <li>Titulo</li>
-            <li>Descripción</li>
-            <li>Dificultad</li>
-            <li>Valoracion</li>
-            <li>Usuarios</li>
+        <img src="../static/images/banner_game.png" class="rounded" alt="Eniun" width="500" height="250" />
+        <div class="img-overlay">
+          <a href="{{ url_for('game_lines') }}" class="btn btn-md"><i class="fas fa-play"></i> Jugar </a></a>
+
+        <div class="form-group" id="rating-ability-wrapper">
+      <label class="control-label" for="rating">
+     
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+  </div>
+
+        </div>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">Descripción Cras justo odio</li>
+          <li class="list-group-item">Dificultad: Fácil</li>
+          <li class="list-group-item">Categoria: Mate, Fracciones </li>
         </ul>   
-       </div> 
      </div>
     </div>
     
     <div class="col-md-6">
       <div class="contenedor">
-        <img src="https://regionps.com/wp-content/uploads/2019/07/pes-2020.jpg" class="rounded" alt="Eniun" width="300" height="300" />
-        <div id="sidebar">
-          <ul>
-            <li>Titulo</li>
-            <li>Descripción</li>
-            <li>Dificultad</li>
-            <li>Valoracion</li>
-            <li>Usuarios</li>
-        </ul>  
-       </div> 
+        <img src="../static/images/banner_game.png" class="rounded" alt="Eniun" width="500" height="250" />
+        <div class="img-overlay">
+          <a href="{{ url_for('game_lines') }}" class="btn btn-md"><i class="fas fa-play"></i> Jugar </a></a>
+          <div class="form-group" id="rating-ability-wrapper">
+      <label class="control-label" for="rating">
+     
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+  </div>
+        </div>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">Descripción Cras justo odio</li>
+          <li class="list-group-item">Dificultad: Fácil</li>
+          <li class="list-group-item">Categoria: Mate, Fracciones </li>
+        </ul>   
       </div>
     </div>
   </div>
@@ -68,31 +163,67 @@
   <div class="row">
     <div class="col-md-6">
       <div class="contenedor">
-        <img src="https://lh3.googleusercontent.com/NdUWMwj7j8PED3UVxRX_2Qo9qeDD6SNooMFTLJCCHAO0YnsyKWkgAzfHN1VZARaEBdMO" class="rounded" alt="Eniun" width="300" height="300" />
-        <div id="sidebar">
-          <ul>
-            <li>Titulo</li>
-            <li>Descripción</li>
-            <li>Dificultad</li>
-            <li>Valoracion</li>
-            <li>Usuarios</li>
+        <img src="../static/images/banner_game.png" class="rounded" alt="Eniun" width="500" height="250" />
+        <div class="img-overlay">
+          <a href="{{ url_for('game_lines') }}" class="btn btn-md"><i class="fas fa-play"></i> Jugar </a></a>
+          <div class="form-group" id="rating-ability-wrapper">
+      <label class="control-label" for="rating">
+     
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+  </div>
+        </div>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">Descripción Cras justo odio</li>
+          <li class="list-group-item">Dificultad: Fácil</li>
+          <li class="list-group-item">Categoria: Mate, Fracciones </li>
         </ul>   
-        </div> 
       </div>
     </div>
 
     <div class="col-md-6">
       <div class="contenedor">
-        <img src="https://i.pinimg.com/originals/a2/ea/c1/a2eac1e1644fad2ab6253e7562ebba00.png" class="rounded" alt="Eniun" width="300" height="300" />
-        <div id="sidebar">
-          <ul>
-            <li>Titulo</li>
-            <li>Descripción</li>
-            <li>Dificultad</li>
-            <li>Valoracion</li>
-            <li>Usuarios</li>
+        <img src="../static/images/banner_game.png" class="rounded" alt="Eniun" width="500" height="250" />
+        <div class="img-overlay">
+          <a href="{{ url_for('game_lines') }}" class="btn btn-md"><i class="fas fa-play"></i> Jugar </a></a>
+          <div class="form-group" id="rating-ability-wrapper">
+      <label class="control-label" for="rating">
+     
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+          <i class="fa fa-star" aria-hidden="true"></i>
+      </button>
+  </div>
+        </div>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">Descripción Cras justo odio</li>
+          <li class="list-group-item">Dificultad: Fácil</li>
+          <li class="list-group-item">Categoria: Mate, Fracciones </li>
         </ul>   
-        </div> 
       </div>
     </div>
   </div>
