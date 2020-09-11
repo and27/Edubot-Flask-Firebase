@@ -68,7 +68,7 @@ def juego(i):
 
 @app.route('/perfil')
 def perfil():
-    return render_template('statistics.html', the_title='Juego Líneas')
+    return render_template('perfil.html', the_title='Juego Líneas')
 	
 @app.route('/ranking')
 def ranking():
