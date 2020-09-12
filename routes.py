@@ -40,7 +40,7 @@ def login():
         try:
             login = auth.sign_in_with_email_and_password(email, password)
             #auth.send_email_verification(login['idToken'])
-            return redirect(url_for('index'))
+            return redirect(url_for('perfil'))
         except:
             return render_template('login.html', us=unsuccessful)
 
