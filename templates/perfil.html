@@ -3,9 +3,43 @@
    
 
   <style>
-    .img-fluid{
-      max-width: 10%;
+    .img-fluids{
+      max-width: 20%;
     }
+
+    .card{
+      border-radius: 50px;
+    }
+
+
+    #a, #g {
+
+        list-style: none;
+    }
+
+    .pic {
+        margin:+5% 0 0;
+        float:left;
+    }
+
+    .sections {
+      height:100px;
+      
+    }
+
+    .info {
+      margin:+5% 10px;
+      float:left;
+    }
+
+    #wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      list-style: none;
+    }
+
+
 
   </style>
 
@@ -16,44 +50,81 @@
 		<div class="hd py-3 mb-3 " style="background:url(static/images/banner_game.png) ">
         <h1 class="tittle text-light">Perfil</h1>
 		<p class="text-light">Conoce tu desempeño</p>
-		</div>
-        <div class="container pt-5"></div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card bg-info">
-                      <div class="card-body" align="left">
-                        <h2><span class="badge badge-warning"> Jugador </span></h2>
-                        <p class="card-text"><b style="color:#ffffff">Nombre:</b> Carlitos</p>
-                        <p class="card-text"><b style="color:#ffffff">Edad:</b> 7 años</p>
-                        <p class="card-text"><b style="color:#ffffff">Datos:</b> Unidad Educativa "Ibarra"</p>
-                      </div>
-                    </div>
-                </div>
+    <div class="row mt-5">
+      <div class="col-sm-5">
+        <div class="card ml-3">
+          <div class="card-body">
+            <div class="avatar mx-auto white">
+              <img src="../static/images/user.png" class="rounded-circle" alt="avatar de usuario" style="width:40%">
             </div>
+            <br>
 
-            <div class="col-md-8" >
-		
-              <div class="descripcion" >
-                <h4 align="left">Puntuación</h4>
-                <p align="left">
-                    100/200
-                </p>
-              </div>
-
-              <div align="left" class="dificultad">
-                <h4 align="left">Banderas</h4>
-                  <div>
-                    <img class="img-fluids" src="../static/images/medalla1.png">
-                    <img class="img-fluids" src="../static/images/medalla2.png">
-                    <img class="img-fluids" src="../static/images/medalla4.png">
-                  </div>
-              </div>
-
-
-            </div>
+              <h2 class="card-title"><span class="badge badge-warning mx-auto"> Jugador </span></h2>
+              <hr>
+              <p class="card-text">Nombre: Carlitos</p>
+              <p class="card-text">Edad: 7 años</p>
+              <p class="card-text">Escuela: Unidad Educativa Ibarra</p>
+          </div>
         </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-7">
+            <div Id="wrapper">
+              <section class="sections">
+                  <ul id="a">
+                        <img src="../static/images/point.png" alt="monedas ganadas" width="30%" class="pic">
+                        <p class="info"><h2 align="left">100</h2></p>
+                        <p align="left">Puntos Totales</p>
+                                      
+                  </ul>
+                </section>
+            </div>
+            
+          </div>
+          <div class="col-sm-5">
+            <div Id="wrapper">
+              <section class="sections">
+                  <ul id="g">
+                        <img src="../static/images/llave.png" alt="llaves ganadas" width="40%" class="pic">
+                        <p class="info"><h2 align="left">5</h2></p>
+                        <p align="left">Llaves</p>                                  
+                  </ul>
+                </section>
+            </div>
+          
+          </div>
+
+        </div>
+        <div class="row">
+          <h2 class="card-title ml-5 mt-3"><span class="badge badge-warning mx-auto"> Logros </span></h2>
+          <div align="left" class="dificultad ml-5">
+            <h4 align="left"></h4>
+              <div>
+                <img class="img-fluids" src="../static/images/medalla3.png" alt="medalla">
+                <img class="img-fluids" src="../static/images/medalla2.png" alt="medalla">
+                <img class="img-fluids" src="../static/images/medalla1.png" alt="medalla">
+              </div>
+          </div>     
+
+        </div>
+        
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+        
         <div class="container pt-5"></div>
 
         <h2>Días Jugados</h2>
