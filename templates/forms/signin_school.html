@@ -3,7 +3,7 @@
 <div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
 		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
 		<h1 class="tittle text-light">Regístra Escuela</h1>
-		<p class="text-light" >Ingresa la información para crear una Escuela</p>
+		<p class="text-light" >Ingresa la información de la Escuela</p>
 		</div>
 		<div>
 		{% if s %}
@@ -23,10 +23,10 @@
 			<div class="row">
 				<div class="col col-md-6 offset-md-3">
 					<div class="form-group">
-						<div class="pt-3"><input type="text" class="form-control" id="name_school" name="name_school" placeholder="Nombre de la Escuela"></div>
-						<div class="pt-3"><input type="text" class="form-control" id="location_school" name="location_school" placeholder="Dirección"></div>
-						<div class="pt-3"><input type="text" class="form-control" id="students_school" name="students_school" placeholder="Número de Estudiantes"></div>
-						<div class="pt-3"><input type="text" class="form-control" id="type_school" name="type_school" placeholder="Tipo"></div>
+						<div class="pt-3"><input type="text" class="form-control" id="name_school" name="name_school" aria-describedby="nameschoolHelp" placeholder="Nombre de la Escuela"></div>
+						<div class="pt-3"><input type="text" class="form-control" id="location_school" name="location_school" aria-describedby="locationschoolHelp" placeholder="Dirección"></div>
+						<div class="pt-3"><input type="number" class="form-control" id="students_school" name="students_school" aria-describedby="studentsschoolHelp" placeholder="Número de Estudiantes"></div>
+						<div class="pt-3"><input type="text" class="form-control" id="type_school" name="type_school" aria-describedby="typeschoolHelp" placeholder="Tipo"></div>
 					</div>
 
 					<div class="pt-3">
