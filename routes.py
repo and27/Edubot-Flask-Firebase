@@ -86,6 +86,12 @@ def juegos():
 def juegos2():
     return render_template('index2.html', the_title='Búsqueda de Juegos')
 
+
+@app.route('/formplayer')
+def formplayer():
+    return render_template('forms/jugador.html', the_title='Formulario Jugador')
+
+
 app.register_blueprint(edubot)
 
 if __name__ == '__main__':
