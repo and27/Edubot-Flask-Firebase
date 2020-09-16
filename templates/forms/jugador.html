@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
+	<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+		<h1 class="tittle text-light">Registrar Jugador</h1>
+		<p class="text-light" >Ingresa la información del jugador</p>
+	</div>
+
+	
+	{% if s %}
+		<div class="alert alert-success">
+			<h2>{{s}}</h2>
+		</div>
+	{% endif %}
+	
+	{% if us %}
+		<div class="alert alert-danger">
+			<h2>{{us}}</h2>
+		</div>
+	{% endif %}
+
+	<form action="/signin" method="POST">
+
+		<div class="row">
+			<div class="col col-md-6 offset-md-3">
+				<div class="form-group">
+					<div class="pt-3"><input type="text" class="form-control" id="name_player" name="name_player" aria-describedby="nameplayerHelp" placeholder="Nombre y Apellido"></div>
+					<div class="pt-3"><input type="number" min="1" max="17" class="form-control" id="age_player" name="age_player" aria-describedby="ageplayerHelp" placeholder="Edad"></div>
+					<div class="pt-3"><input type="text" class="form-control" id="level_player" name="level_player" aria-describedby="levelplayerHelp" placeholder="Grado de Educación"></div>
+					<div class="pt-3"><input type="text" class="form-control" id="school_player" name="school_player" aria-describedby="schoolplayerHelp" placeholder="Escuela"></div>
+				</div>
+
+				<div class="pt-3">
+					<label>
+							<input type="checkbox" checked="checked" name="remember"> Acepto los <a href="#">términos y condiciones</a>
+					</label>
+				</div>
+
+				<button class="btn btn-primary form-control" type="submit" id="buttonr" aria-haspopup="true" aria-expanded="false">
+					Registrar Jugador
+				</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}	
