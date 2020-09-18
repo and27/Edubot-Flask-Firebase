@@ -91,6 +91,10 @@ def juegos2():
 def formplayer():
     return render_template('forms/jugador.html', the_title='Formulario Jugador')
 
+@app.route('/formschool')
+def formpschool():
+    return render_template('forms/signin_school.html', the_title='Formulario Escuela')
+
 
 app.register_blueprint(edubot)
 
