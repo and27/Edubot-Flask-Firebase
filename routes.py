@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, session, url_for
+from functools import wraps
 from rank_dic import rank_dic 
 from game_dic import game_dic
 from views.api_player import edubot
@@ -25,6 +26,18 @@ auth = firebase.auth()
 
 
 # two decorators, same function
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args, **kwargs)
+        else:
+            # flash("You need to login first")
+            return redirect(url_for('login'))
+
+    return wrap
+
+
 @app.route('/')
 @app.route('/index.html')
 def index():
@@ -67,10 +80,12 @@ def juego(i):
     return render_template('juego_base.html', game_title=game_dic[i]["game_title"], game_competence=game_dic[i]["game_competence"], game_description=game_dic[i]["game_description"], game_image=game_dic[i]["game_image"] )
 
 @app.route('/perfil')
+@login_required
 def perfil():
     return render_template('perfil.html', the_title='Juego Líneas')
 	
 @app.route('/ranking')
+@login_required
 def ranking():
     return render_template('ranking.html', rank_dic=rank_dic)
 	
@@ -88,10 +103,12 @@ def juegos2():
 
 
 @app.route('/formplayer')
+@login_required
 def formplayer():
     return render_template('forms/jugador.html', the_title='Formulario Jugador')
 
 @app.route('/formschool')
+@login_required
 def formpschool():
     return render_template('forms/signin_school.html', the_title='Formulario Escuela')
 
