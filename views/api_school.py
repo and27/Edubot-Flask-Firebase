@@ -63,6 +63,33 @@ def delete_school(id):
  # except Exception as e:
  #  return bad_request()
 
+@edubot.route('/school/signin',  methods=['GET', 'POST'])
+def signin_school():
+    unsuccessful = 'Error en registro'
+    successful = 'Se Registro Correctamente'
+    if request.method=='POST':
+        name = request.form['name_school']
+        location = request.form['location_school']
+        students_num = request.form['students_school']
+        type_s = request.form['type_school']
+
+        post = {
+            "location": location,
+            "name": name,
+            "students_num": int(students_num),
+            "type_s": type_s
+        }
+
+        try:
+          db.collection("school").add(post)
+          return render_template('forms/signin_school.html', s=successful)
+        except:
+          return render_template('forms/signin_school.html', us=unsuccessful)
+
+    return render_template('forms/signin_school.html', the_title='Registrate')
+
+ 
+
 app.register_blueprint(edubot)
 
 port = int(os.environ.get('PORT', 5050))
