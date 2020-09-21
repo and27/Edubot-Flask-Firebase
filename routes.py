@@ -23,6 +23,8 @@ firebaseConfig = {
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
+db = firebase.database()
+
 
 
 # two decorators, same function
@@ -102,9 +104,30 @@ def juegos2():
     return render_template('index2.html', the_title='Búsqueda de Juegos')
 
 
-@app.route('/formplayer')
-@login_required
+@app.route('/formplayer', methods=['GET', 'POST'])
 def formplayer():
+    unsuccessful = 'Error en registro'
+    successful = 'Se Registro Correctamente'
+    if request.method=='POST':
+        name = request.form['name_player']
+        age = request.form['age_player']
+        level = request.form['level_player']
+        school = request.form['school_player']
+
+        post = {
+            "name": name,
+            "age": age,
+            "level": level,
+            "school":school
+        }
+
+        try:
+            db.child("Player").push(post)
+            return render_template('forms/jugador.html', s=successful)
+
+        except:
+            return render_template('forms/jugador.html', us=unsuccessful)
+
     return render_template('forms/jugador.html', the_title='Formulario Jugador')
 
 @app.route('/formschool')
