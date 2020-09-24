@@ -135,6 +135,12 @@ def formplayer():
 def formpschool():
     return render_template('forms/signin_school.html', the_title='Formulario Escuela')
 
+@app.route('/filters')
+def filters():
+    return render_template('filters.html', the_title='Filtro para Juegos')
+
+
+
 
 app.register_blueprint(edubot)
 
