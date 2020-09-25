@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <head>
+    <meta charset="utf-8">    
+    <meta name="author" content="Petertutoriales">
+
+
+    <!-- Bootstrao -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+     <!-- Diseño propio del formulario -->
+    <link href="css/formulario.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+     <form role="form" class="formulario" action="enviando.php" method="post">
+      <div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
+  
+    <div class="hd py-3 mb-3 " style="background:url(static/images/banner_game.png) ">
+    <h1 class="tittle text-light">Contáctanos</h1>
+    <p class="text-light" >Por favor escríbenos y en breve nos pondremos en contacto contigo</p>
+    </div>
+      
+      <div class="col col-md-6 offset-md-3">
+        <div class="required-field-block form-group">
+            <input type="text" placeholder="Nombre" name="nombre" class="form-control">
+            <div class="required-icon">
+                <div class="text">*</div>
+            </div>
+        </div>
+        
+        <div class="required-field-block form-group">
+            <input type="text" placeholder="Email" name="email" class="form-control">
+            <div class="required-icon">
+                <div class="text">*</div>
+            </div>
+        </div>        
+
+        <input type="text" placeholder="Teléfono" name="telefono" class="form-control form-group">
+
+        <!-- Select Basic -->
+
+  
+  <div class="required-field-block form-group">
+    <select id="selectbasic" name="ubicacion" class="form-control">
+      <option>Ubicación</option>
+      <option value="Pais 1">Quito</option>
+      <option value="Pais 2">Guayaquil</option>
+      <option value="Pais 3">Cuenca</option>
+      <option value="Pais 4">Ibarra</option>
+    </select>
+  </div>
+
+ 
+        <div class="required-field-block form-group">
+            <textarea rows="3" class="form-control area-largo" placeholder="Mensaje" name="mensaje"></textarea>
+            <div class="required-icon">
+                <div class="text">*</div>
+            </div>
+        </div>
+
+        <div class="pt-3">
+          <label>
+              <input type="checkbox" checked="checked" name="remember"> Acepto los <a href="#">términos y condiciones</a>
+          </label>
+        </div>
+        <button class="btn btn-primary">Enviar</button>
+        </div>        
+
+      </div>
+        
+    </form>
+
+  </body>
+
+  {% endblock %}
