@@ -103,6 +103,12 @@ def juegos():
 def juegos2():
     return render_template('index2.html', the_title='Búsqueda de Juegos')
 
+@app.route('/contacto')
+def contacto():
+    return render_template('contact_us.html', the_title='Contáctanos')
+
+
+
 
 @app.route('/formplayer', methods=['GET', 'POST'])
 def formplayer():
@@ -134,6 +140,11 @@ def formplayer():
 @login_required
 def formpschool():
     return render_template('forms/signin_school.html', the_title='Formulario Escuela')
+
+@app.route('/formtutor')
+@login_required
+def formtutor():
+    return render_template('forms/tutor.html', the_title='Formulario del Tutor')
 
 @app.route('/filters')
 def filters():
