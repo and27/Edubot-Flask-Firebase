@@ -69,6 +69,14 @@ padding-top:15%!important;
 
 }
 
+.play-edubot{
+	box-shadow: 2px 2px 1px rgb(105 70 4)!important;
+}
+
+.font-nav-edubot{
+	font-size:large!important;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .im_prin {
