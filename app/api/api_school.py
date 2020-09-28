@@ -7,7 +7,7 @@ from responses.responses import bad_request, response
 # Initialize Flask App
 app = Flask(__name__)
 # Initialize Firestore DB
-cred = credentials.Certificate('edubot-f2362-firebase-adminsdk-k4fzh-6c456bc9e2.json')
+cred = credentials.Certificate('edubot-f2362-firebase-adminsdk-k4fzh-06a288c822.json')
 default_app = initialize_app(cred)
 db = firestore.client()
 

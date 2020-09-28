@@ -1,4 +1,4 @@
--{% extends "base.html" %}
+{% extends "base.html" %}
 {% block content %}
 <div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
 		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
@@ -18,7 +18,7 @@
 			</div>
 		{% endif %}
 
-		<form action="/signin" method="POST">
+		<form action="/register" method="POST">
 		{{ form.csrf_token }}
 		{{ form.hidden_tag() }}
 
@@ -88,6 +88,7 @@
 				</div>
 			</div>
 		</form>
+</div>
 </div>
 
 {% endblock %}
