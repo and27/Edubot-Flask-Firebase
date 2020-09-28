@@ -9,6 +9,11 @@ import pyrebase
 
 app = Flask(__name__)
 
+#Secret Key
+#SECRET_KEY = os.urandom(32)
+#app.config['SECRET_KEY'] = SECRET_KEY
+
+
 firebaseConfig = {
     "apiKey": "AIzaSyCbdZiJXL23Cy3hozapwNzl_QDJ7SQXZYQ",
     "authDomain": "edubot-f2362.firebaseapp.com",
@@ -45,6 +50,13 @@ def login_required(f):
 def index():
     return render_template('index.html', the_title='Edubot Home Page')
 
+@app.route('/logout', methods=['GET'])
+@login_required
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     unsuccessful = 'Credenciales Incorrectas'
@@ -55,6 +67,8 @@ def login():
         try:
             login = auth.sign_in_with_email_and_password(email, password)
             #auth.send_email_verification(login['idToken'])
+            session.clear()
+            session['logged_in']=True
             return redirect(url_for('perfil'))
         except:
             return render_template('login.html', us=unsuccessful)
