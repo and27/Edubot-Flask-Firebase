@@ -7,7 +7,7 @@
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
-	    {% if not session.logged_in %}
+	    {% if not session.get('logged_in') %}
 	  
   <ul class="navbar-nav mr-auto">
 	      <li class="nav-item">
@@ -39,7 +39,7 @@
 	        <a class="nav-link font-nav-edubot" href="{{ url_for('perfil') }}">Perfil</a>
 	      </li>
 	      <li class="nav-item">
-	      	<a class="nav-link font-nav-edubot" href="#">Cerrar Sesión</a>
+	      	<a class="nav-link font-nav-edubot" href="{{ url_for('logout') }}">Cerrar Sesión</a>
 	      </li>
 	   
 		  
