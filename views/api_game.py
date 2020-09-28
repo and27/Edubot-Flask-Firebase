@@ -63,6 +63,31 @@ def delete_game(id):
 # except Exception as e:
  # return bad_request()
 
+@edubot.route('/game/signin',  methods=['GET', 'POST'])
+def signin_game():
+    unsuccessful = 'Error en registro'
+    successful = 'Se Registro Correctamente'
+    if request.method=='POST':
+        name = request.form['name_game']
+        category = request.form['category_game']
+        level = request.form['level_game']
+        rating = request.form['rating_game']
+
+        post = {
+            "category": category,
+            "level": level,
+            "name": name,
+            "rating": rating
+        }
+
+        try:
+          db.collection("game").add(post)
+          return render_template('forms/signin_game.html', s=successful)
+        except:
+          return render_template('forms/signin_game.html', us=unsuccessful)
+
+    return render_template('forms/signin_game.html', the_title='Registrate'
+
 
 app.register_blueprint(edubot)
 
