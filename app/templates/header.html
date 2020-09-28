@@ -1,3 +1,9 @@
+<style>
+.btn-edu-color{
+	color:white!important;
+}
+</style>
+
 	<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5 nav-color">
 	  <!-- <a class="navbar-brand" href="#">Edubot</a> -->
 	  <a class="navbar-brand" href="{{url_for('index')}}">
@@ -21,7 +27,7 @@
 	        <a class="nav-link font-nav-edubot" href="{{ url_for('auth.login') }}">Inicia sesión</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link font-nav-edubot" href="{{ url_for('auth.register') }}">Únete gratis</a>
+	        <a class="nav-link font-nav-edubot btn btn-info btn-edu-color" href="{{ url_for('auth.register') }}">Únete gratis</a>
 	      </li>
 		  
 		</ul>
@@ -36,7 +42,7 @@
 		  </ul>
 		  <ul class="navbar-nav">
 			<li class="nav-item">
-	        <a class="nav-link font-nav-edubot" href="{{ url_for('perfil') }}">Perfil</a>
+	        <a class="nav-link font-nav-edubot btn btn-info btn-edu-color" href="{{ url_for('perfil') }}">Perfil</a>
 	      </li>
 	      <li class="nav-item">
 	      	<a class="nav-link font-nav-edubot" href="{{ url_for('logout') }}">Cerrar Sesión</a>
