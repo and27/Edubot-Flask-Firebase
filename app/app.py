@@ -84,6 +84,10 @@ def juegos2():
 def contacto():
     return render_template('contact_us.html', the_title='Contáctanos')
 
+@app.route('/FQAs')
+def fqas():
+    return render_template('FQAs.html', the_title='FQAs')
+
 @app.route('/formplayer', methods=['GET', 'POST'])
 def formplayer():
     unsuccessful = 'Error en registro'
