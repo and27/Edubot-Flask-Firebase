@@ -69,21 +69,47 @@ padding-top:15%!important;
 
 }
 
-.play-edubot{
-	box-shadow: 2px 2px 1px rgb(105 70 4)!important;
-}
-
-.font-nav-edubot{
-	font-size:large!important;
-}
-
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .im_prin {
     width: 30%;
-	
+
 }
 	.main-title{
 		font-size: 3.5rem;
 	}
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.333%);
+  }
+
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.333%);
+  }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{
+transform: translateX(0);
 }
