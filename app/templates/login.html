@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="contenedor text-center pb-5" style="min-height:85vh; padding-top:6vh">
+	
+		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+		<h1 class="tittle text-light"  >Bienvenido a Edubot</h1>
+		<p class="text-light" >Inserta tus credenciales para acceder</p>
+		</div>
+		
+		<div>
+			<img src="../static/images/oso_2.png" width="15%" style="z-index:1; position:absolute; top:10vw; left:5vw;" alt="Imagen de osito grande con logo de Edubot" >
+		</div>
+
+		
+		{% if us %}
+			<div class="alert alert-danger">
+				<h2>{{us}}</h2>
+			</div>
+		{% endif %}
+
+		<form action="/login" method="POST">
+		{{ form.csrf_token }}
+		{{ form.hidden_tag() }}
+
+			<div class="row">
+				<div class="col col-md-6 offset-md-3">
+
+					<div class="form-group">
+						<div class="pt-3">
+							<!-- {{ form.email.label }} --> 
+							{{ form.email}}
+							{% if form.email.errors %}
+								<!-- <ul class="errors"> -->
+									{% for error in form.email.errors %}
+										<!-- <li>{{ error }}</li> -->
+										<span style="color: red">{{error}}</span>
+									{% endfor %}
+								<!-- </ul> -->
+							{% endif %}
+						</div>
+						<div class="pt-3">
+							{{ form.password }}
+							{% if form.password.errors %}
+								<!-- <ul class="errors"> -->
+									{% for error in form.password.errors %}
+										<span style="color: red">{{error}}</span>
+									{% endfor %}
+								<!-- </ul> -->
+							{% endif %}
+						</div>
+					</div>
+					<button class="btn btn-edubot form-control" type="submit" id="buttis" aria-haspopup="true" aria-expanded="false">
+					Ingresa
+					</button>
+					<div class="pt-3">
+						<label>
+						<input type="checkbox" checked="checked" name="remember"> Recuérdame
+						</label>
+					</div>
+					<div class="container">
+						<span class="psw"><a href="#">Olvidaste tu contraseña?</a></span>
+					</div>
+			
+				</div>
+			</div>
+		</form>
+
+ </div>
+{% endblock %}	

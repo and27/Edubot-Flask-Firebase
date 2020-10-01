@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+
+.faqs{
+margin: 0;
+padding: 0 3em 2em 2em;
+position: relative;
+color: inherit;
+}
+
+.faq{
+margin: 0;
+/*padding: 2em 3em 2em 2em*/;
+position: relative;
+color: inherit;
+}
+
+.question{
+margin: 0;
+padding: 2em 3em 2em 2em;
+font-weight: bold;
+position: relative;
+color: inherit;
+}
+
+.answer{
+padding: 0 3em 0 2em;
+color: black;
+font-weight: normal;
+}
+</style>
+
+
+	<div class="contenedor text-center pt-5">
+  		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+  			<h1 class="tittle text-white">Preguntas Frecuentes</h1>
+    	<!-- <p class="text-light">Top Estudiantes</p> -->
+		</div>
+
+		<div class="content faqs text-left">
+			<div id="que-es-edubot" class="faq expanded">
+			<p class="question" title="Qué es Edubot?">
+				¿Qué es Edubot?
+			</p>
+				<div class="answer">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+
+			<div id="que-es-edubot" class="faq expanded">
+			<p class="question" title="Qué es Edubot?">
+				¿Cómo ser parte de Edubot?
+			</p>
+			<div class="answer">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			</div>
+			</div>
+
+			<div id="que-es-edubot" class="faq expanded">
+			<p class="question" title="Qué es Edubot?">
+				¿Qué podemos aprender jugando?
+			</p>
+			<div class="answer">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+{% endblock %}

@@ -2,12 +2,21 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from functools import wraps
 from rank_dic import rank_dic 
 from game_dic import game_dic
-from views.api_player import edubot
+#from views.api_player import edubot
+from api.api_player import edubot
+from auth import auth_b
+import os
 import pyrebase
 
 
 
+
+
 app = Flask(__name__)
+#Secret Key
+SECRET_KEY = os.urandom(32)
+app.config['SECRET_KEY'] = SECRET_KEY
+
 
 firebaseConfig = {
     "apiKey": "AIzaSyCbdZiJXL23Cy3hozapwNzl_QDJ7SQXZYQ",
@@ -35,47 +44,22 @@ def login_required(f):
             return f(*args, **kwargs)
         else:
             # flash("You need to login first")
-            return redirect(url_for('login'))
+            return redirect(url_for('auth.login'))
 
     return wrap
 
 
 @app.route('/')
-@app.route('/index.html')
+@app.route('/index')
 def index():
-    return render_template('index.html', the_title='Edubot Home Page')
+    return render_template('index.html',  the_title='Edubot Home Page', largefooter=True)
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    unsuccessful = 'Credenciales Incorrectas'
-    successful = 'Inicio de Sesion Correcto'
-    if request.method == 'POST':
-        email = request.form['email']
-        password = request.form['passd']
-        try:
-            login = auth.sign_in_with_email_and_password(email, password)
-            #auth.send_email_verification(login['idToken'])
-            return redirect(url_for('perfil'))
-        except:
-            return render_template('login.html', us=unsuccessful)
+@app.route('/logout', methods=['GET'])
+@login_required
+def logout():
+    session.clear()
+    return redirect(url_for('auth.login'))
 
-    return render_template('login.html', the_title='Login')
-
-@app.route('/signin',  methods=['GET', 'POST'])
-def signin():
-    unsuccessful = 'Error en registro'
-    successful = 'Se Registro Correctamente'
-    if request.method=='POST':
-        email = request.form['mail']
-        password = request.form['pass']
-        try:
-            user = auth.create_user_with_email_and_password(email, password)
-            auth.send_email_verification(user['idToken'])
-            return render_template('signin.html', s=successful)
-        except:
-            return render_template('signin.html', us=unsuccessful)
-
-    return render_template('signin.html', the_title='Registrate')
 
 @app.route('/juego/<int:i>')
 def juego(i):
@@ -97,11 +81,17 @@ def game_lines():
 
 @app.route('/juegos')
 def juegos():
-    return render_template('search.html', the_title='Búsqueda de Juegos')
+    return render_template('filters.html', the_title='Búsqueda de Juegos')
 	
 @app.route('/index2')
 def juegos2():
     return render_template('index2.html', the_title='Búsqueda de Juegos')
+
+@app.route('/contacto')
+def contacto():
+    return render_template('contact_us.html', the_title='Contáctanos')
+
+
 
 
 @app.route('/formplayer', methods=['GET', 'POST'])
@@ -135,15 +125,20 @@ def formplayer():
 def formpschool():
     return render_template('forms/signin_school.html', the_title='Formulario Escuela')
 
+@app.route('/formtutor')
+@login_required
+def formtutor():
+    return render_template('forms/tutor.html', the_title='Formulario del Tutor')
+
 @app.route('/filters')
 def filters():
     return render_template('filters.html', the_title='Filtro para Juegos')
 
 
 
-
+app.register_blueprint(auth_b)
 app.register_blueprint(edubot)
+
 
 if __name__ == '__main__':
     app.run(debug= True)
-

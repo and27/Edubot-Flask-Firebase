@@ -128,7 +128,11 @@ ul.social-network li {
 
 </style>
 
+{% if largefooter%}
+<div class="container-fluid px-0 mx-0">
+{% else %}
 <div class="container">
+{% endif %}
 <footer class="mainfooter" role="contentinfo">
   <div class="footer-middle">
   <div class="container">
@@ -143,7 +147,7 @@ ul.social-network li {
             <li><a href="#">Terms</a></li>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">News and Updates</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li><a href="{{url_for('fqas')}}">FAQs</a></li>
           </ul>
         </div>
       </div>

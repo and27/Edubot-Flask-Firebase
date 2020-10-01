@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
+		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+		<h1 class="tittle text-light">Regístra Escuela</h1>
+		<p class="text-light" >Ingresa la información de la Escuela</p>
+		</div>
+		<div>
+		{% if s %}
+			<div class="alert alert-success">
+				<h2>{{s}}</h2>
+			</div>
+		{% endif %}
+		
+		{% if us %}
+			<div class="alert alert-danger">
+				<h2>{{us}}</h2>
+			</div>
+		{% endif %}
+
+		<form action="/school/signin" method="POST">
+		{{ form.csrf_token }}
+		{{ form.hidden_tag() }}
+
+			<div class="row">
+				<div class="col col-md-6 offset-md-3">
+					<div class="form-group">
+						<div class="pt-3">
+							{{ form.name }}
+							{% if form.name.errors %}
+								<!-- <ul class="errors"> -->
+									{% for error in form.name.errors %}
+										<span style="color: red">{{error}}</span>
+									{% endfor %}
+								<!-- </ul> -->
+							{% endif %}
+						</div>
+						<div class="pt-3">
+							
+							{{ form.location}}
+							{% if form.location.errors %}
+								<!-- <ul class="errors"> -->
+									{% for error in form.location.errors %}
+										<!-- <li>{{ error }}</li> -->
+										<span style="color: red">{{error}}</span>
+									{% endfor %}
+								<!-- </ul> -->
+							{% endif %}
+						</div>
+						<div class="pt-3">
+							{{ form.students_num }}
+							{% if form.students_num.errors %}
+								<!-- <ul class="errors"> -->
+									{% for error in form.students_num.errors %}
+										<span style="color: red">{{error}}</span>
+									{% endfor %}
+								<!-- </ul> -->
+							{% endif %}
+						</div>
+						<div class="pt-3">
+							{{ form.type_s }}
+							{% if form.type_s.errors %}
+								<!-- <ul class="errors"> -->
+									{% for error in form.type_s.errors %}
+										<span style="color: red">{{error}}</span>
+									{% endfor %}
+								<!-- </ul> -->
+							{% endif %}
+						</div>
+
+
+
+						<!-- <div class="pt-3"><input type="text" class="form-control" id="name_school" name="name_school" aria-describedby="nameschoolHelp" placeholder="Nombre de la Escuela"></div>
+						<div class="pt-3"><input type="text" class="form-control" id="location_school" name="location_school" aria-describedby="locationschoolHelp" placeholder="Dirección"></div>
+						<div class="pt-3"><input type="number" min="1" class="form-control" id="students_school" name="students_school" aria-describedby="studentsschoolHelp" placeholder="Número de Estudiantes"></div>
+						<div class="pt-3"><input type="text" class="form-control" id="type_school" name="type_school" aria-describedby="typeschoolHelp" placeholder="Tipo"></div> -->
+					</div>
+
+					<div class="pt-3">
+					<label>
+							<input type="checkbox" checked="checked" name="remember"> Acepto los <a href="#">términos y condiciones</a>
+						</label>
+					</div>
+
+					<button class="btn btn-primary form-control" type="submit" id="buttonr" aria-haspopup="true" aria-expanded="false">
+						Registrar
+					</button>
+				</div>
+			</div>
+		</form>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock %}
