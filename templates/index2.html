@@ -2,7 +2,7 @@
 {% block content %}
 <div class="text-center py-4 " style="min-height:80vh; padding-top:6vh">
 
-	
+
 		<img src="../static/images/bear_profile_2.png" class="im_prin">
 		<h1 class="main-title mt-1 ">¿Qué vamos a aprender hoy?</h1>
 		<h4 class="text-white">Busca un juego y comencemos a aprender</h4>
@@ -20,8 +20,176 @@
 		<button class="btn btn-edubot " type="button">Ver todos los proyectos</button>
 	</div>
   </div>
-  
+
+	<div class="container pt-5"></div>
+	<h3 class="text-white">Top 5</h3>
+	<div class="container text-center my-3">
+		<div class="row mx-auto my-auto">
+				<div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+						<div class="carousel-inner w-100" role="listbox">
+								<div class="carousel-item active">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v1.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v2.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v3.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v4.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v3.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+												<!--<div class="card card-body">-->
+														<img class="img-fluid" src="static/images/v2.JPG">
+
+										</div>
+								</div>
+						</div>
+						<a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+								<span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+						</a>
+				</div>
+		</div>
+	</div>
+
+  <div class="container pt-5"></div>
+
+	<h3 class="text-white">Newest games</h3>
+	<div class="container text-center my-3">
+		<div class="row mx-auto my-auto">
+				<div id="recipeCarousel2" class="carousel slide w-100" data-ride="carousel">
+						<div class="carousel-inner w-100" role="listbox">
+								<div class="carousel-item active">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v1.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v2.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v3.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v4.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+
+														<img class="img-fluid" src="static/images/v3.JPG">
+
+										</div>
+								</div>
+								<div class="carousel-item">
+										<div class="col-md-4">
+												<!--<div class="card card-body">-->
+														<img class="img-fluid" src="static/images/v2.JPG">
+
+										</div>
+								</div>
+						</div>
+						<a class="carousel-control-prev w-auto" href="#recipeCarousel2" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next w-auto" href="#recipeCarousel2" role="button" data-slide="next">
+								<span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+						</a>
+				</div>
+		</div>
+	</div>
 
 
 </div>
+<script>
+$('#recipeCarousel').carousel({
+	interval: 10000
+})
+
+	$('.carousel .carousel-item').each(function(){
+			var minPerSlide = 3;
+			var next = $(this).next();
+			if (!next.length) {
+			next = $(this).siblings(':first');
+			}
+			next.children(':first-child').clone().appendTo($(this));
+
+			for (var i=0;i<minPerSlide;i++) {
+					next=next.next();
+					if (!next.length) {
+						next = $(this).siblings(':first');
+					}
+
+					next.children(':first-child').clone().appendTo($(this));
+				}
+	});
+
+	$('#recipeCarousel2').carousel({
+		interval: 10000
+	})
+
+		$('.carousel .carousel-item').each(function(){
+				var minPerSlide = 3;
+				var next = $(this).next();
+				if (!next.length) {
+				next = $(this).siblings(':first');
+				}
+				next.children(':first-child').clone().appendTo($(this));
+
+				for (var i=0;i<minPerSlide;i++) {
+						next=next.next();
+						if (!next.length) {
+							next = $(this).siblings(':first');
+						}
+
+						next.children(':first-child').clone().appendTo($(this));
+					}
+		});
+
+</script>
 {% endblock %}
