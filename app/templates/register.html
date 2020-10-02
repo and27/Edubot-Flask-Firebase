@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
 		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+		<div class="animation-planet" >
+			<img src="static/images/planets/planet1.png" style="z-index:1; position:absolute; top:10vw; left:5vw; width: 8%;">
+
+		</div>
+		<div class="planet">
+			<img src="static/images/planets/planet6.png" style="z-index:1; position:absolute; top:20vw; right:5vw; width: 8%;">
+
+
+		</div>
 		<h1 class="tittle text-light">Regístrate en Edubot</h1>
 		<p class="text-light" >Ingresa tu información para crear una cuenta</p>
 		</div>
@@ -82,7 +92,7 @@
 						</label>
 					</div>
 
-					<button class="btn btn-primary form-control" type="submit" id="buttonr" aria-haspopup="true" aria-expanded="false">
+					<button class="btn btn-edubot form-control" type="submit" id="buttonr" aria-haspopup="true" aria-expanded="false">
 						Regístrate
 					</button>
 				</div>
