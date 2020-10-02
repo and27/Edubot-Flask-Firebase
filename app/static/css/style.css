@@ -56,7 +56,8 @@ padding-top:15%!important;
 }
 
 .btn-edubot{
-	background-color: #0c92a6!important;
+  /*background-color: #0c92a6!important;*/
+  background-color: #0da1ad!important;
 	color:white!important;
 }
 
@@ -68,6 +69,41 @@ padding-top:15%!important;
     width: 20%;
 
 }
+
+/*----------Start Key frames animations------------*/
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 15px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+@keyframes planet-animate {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 15px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+
+.animation-planet img{  
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.planet img{
+  animation-name: planet-animate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+/*------------End animations---------------*/
+
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
