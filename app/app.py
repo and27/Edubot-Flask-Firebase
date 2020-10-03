@@ -92,6 +92,11 @@ def fqas():
 def acerca():
     return render_template('about_us.html', the_title='Acerca de Nosotros')
 
+@app.route('/index3')
+def index3():
+    return render_template('index3.html', the_title='index3')
+
+
 @app.route('/formplayer', methods=['GET', 'POST'])
 def formplayer():
     unsuccessful = 'Error en registro'
