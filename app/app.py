@@ -88,6 +88,10 @@ def contacto():
 def fqas():
     return render_template('FQAs.html', the_title='FQAs')
 
+@app.route('/acerca')
+def acerca():
+    return render_template('about_us.html', the_title='Acerca de Nosotros')
+
 @app.route('/formplayer', methods=['GET', 'POST'])
 def formplayer():
     unsuccessful = 'Error en registro'
