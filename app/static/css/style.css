@@ -142,10 +142,41 @@ padding-top:15%!important;
       transform: scale(1)
   }
 }
-/*---------------------*/
+/*-----------End about us----------*/
+
+/*------- Bear Animations index3----*/
+
+.oso{
+  position: relative;
+  bottom: 0px;
+  height: 250px;
+}
+
+.bear-head img{
+  position: relative;
+  width: 8rem;
+  transform: rotate(-10deg);
+  animation: move-head 3s infinite;
+  transform-origin: bottom;
+}
+
+@keyframes move-head{
+  50%{
+      transform: rotate(10deg);
+  }
+}
 
 
-/*----------Start Key frames animations------------*/
+.bear-body img{
+  position: relative;
+  width: 8rem;
+  bottom: 4px;
+  left: 10px;
+}
+/*-------End Bear Animations index3----*/
+
+
+/*----------Planets animations------------*/
 @keyframes floating {
   from { transform: translate(0,  0px); }
   65%  { transform: translate(0, 15px); }
