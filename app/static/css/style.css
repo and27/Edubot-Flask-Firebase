@@ -29,6 +29,13 @@ padding-top:15%!important;
 	letter-spacing: 1.5px;
 }
 
+.subtitle{
+  font-family: 'Asap', sans-serif;
+	font-weight: 700;
+  color: rgb(8, 83, 168);
+	letter-spacing: 1.5px;
+}
+
  .img-fluids{
       max-width: 10%;
     }
@@ -69,6 +76,74 @@ padding-top:15%!important;
     width: 20%;
 
 }
+
+/*--------About us-------------*/
+.member{
+  width: 10rem;
+}
+
+.more .btn{
+  border-radius: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  }
+
+.obj{
+  font-size: 0.8rem;
+}
+
+.testimonio{
+  height: 200px;
+  background-image: linear-gradient(rgb(247, 207, 113),rgb(245, 237, 132) );
+}
+
+.card-top img {
+  border: 5px solid white !important
+}
+.card-top {
+  border-radius: 20px !important
+}
+
+.card-testimony {
+  border-radius: 20px !important;
+  box-shadow: 2px 2px 5px 0px rgb(100, 108, 170);
+  transition: 0.8s
+}
+
+.profile-pic {
+  margin-bottom: -5px !important
+}
+
+.outside {
+  position: inherit;
+  top: -50%
+}
+
+.quotes {
+  position: relative;
+  top: -10px
+}
+
+.quotes-down {
+  position: relative;
+  top: -4 px
+}
+
+.name {
+  margin-top: -50px !important
+}
+
+.card-testimony:hover{
+  transform: scale(1.05)
+}
+
+@media (max-width: 1000px) {
+  .card-testimony:hover {
+      transform: scale(1)
+  }
+}
+/*---------------------*/
+
 
 /*----------Start Key frames animations------------*/
 @keyframes floating {
