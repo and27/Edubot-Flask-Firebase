@@ -1,4 +1,4 @@
-game_dic = [
+game2_dic = [
 	{"game_title":"Juego 5 Enteros",
 	"game_description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 	"game_dificulty":"Facil",
