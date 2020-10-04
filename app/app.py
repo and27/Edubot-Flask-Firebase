@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from functools import wraps
 from rank_dic import rank_dic 
 from game_dic import game_dic
-from game2_dic import game_dic
+from game2_dic import game2_dic
 #from views.api_player import edubot
 from api.api_school import edubot
 import pyrebase
@@ -99,7 +99,7 @@ def index3():
 
 @app.route('/cards')
 def cards():
-    return render_template('filters_base.html', game_dic=game_dic)
+    return render_template('filters_base.html', game2_dic=game2_dic)
 
 
 @app.route('/formplayer', methods=['GET', 'POST'])
