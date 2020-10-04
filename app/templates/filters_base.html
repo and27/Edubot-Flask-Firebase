@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    @media (min-width: 768px) {
+      .btn-play {
+          position: relative;
+          transform: translate(-0%, 30%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #f8cb03;
+          color: rgb(12, 1, 1);
+          font-size: 1.2rem;
+          padding: 0.2rem 1rem;
+          border: none;
+          cursor: pointer;
+          border-radius: 40px;
+          text-align: center;
+          box-shadow: 0 4px rgb(153, 153, 153);
+
+      }
+
+      .btn-play:hover {
+          background-color: rgb(240, 227, 51);
+      }
+        
+      .btn-play:active {
+          background-color: rgb(240, 227, 51);
+          box-shadow: 0 4px #666;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .btn-play {
+          position: relative;
+          transform: translate(0%, 30%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #f8cb03;
+          color: rgb(12, 1, 1);
+          font-size: 1.5rem;
+          padding: 0.2rem 1rem;
+          border: none;
+          cursor: pointer;
+          border-radius: 40px;
+          text-align: center;
+          box-shadow: 0 4px rgb(153, 153, 153);
+
+      }
+
+      .btn-play:hover {
+          background-color: rgb(240, 227, 51);
+      }
+        
+      .btn-play:active {
+          background-color: rgb(240, 227, 51);
+          box-shadow: 0 4px #666;
+      }
+    }
+
+    
+
+    .checked {
+      color: orange;
+    }
+
+    .star-size{
+      font-size: 1.5rem;
+      
+    }
+
+
+    
+</style>
+
+
+<div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
+    <div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+    
+        <h1 class="tittle text-light">Juegos</h1>
+	    <p class="text-light">Busca un juego para comenzar a aprender</p>
+    </div>
+
+
+    <div class="col col-md-7 offset-md-3">
+        <div class="input-group mb-5 mt-5">
+            <input type="text" class="form-control" placeholder="Buscar...">
+            <div class="input-group-append">
+                <a href="#" type="button" class="btn btn-warning btn-search">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 d-none d-sm-block col-sm-5" style="padding-left: 3%;" align="left">
+                <div class="card bg-light mx-auto" style="max-width: 15rem;">
+                  <div class="p-4" >
+                        <h5 class="card-title">Dificultad</h5>
+                        <p class="card-text">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                Fácil
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios1">
+                                Medio
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3" value="option3">
+                                <label class="form-check-label" for="exampleRadios1">
+                                Difícil
+                                </label>
+                            </div>
+                        </p>
+						</div>
+						  <div class="p-4" style="background-color:white">
+                        <h5 class="card-title">Más Jugados</h5>
+                        <p class="card-text">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option4">
+                                <label class="form-check-label" for="exampleRadios1">
+                                Última semana
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option5">
+                                <label class="form-check-label" for="exampleRadios2">
+                                Último mes
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option6">
+                                <label class="form-check-label" for="exampleRadios2">
+                                Último año
+                                </label>
+                            </div>
+                        </p>
+						</div>
+						
+						  <div class="p-4" >
+                        <h5 class="card-title">Categoría</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios1" value="option7">
+                            <label class="form-check-label" for="exampleRadios1">
+                            <p class="card-text">Matemáticas</p>
+                            </label>
+                        </div>
+                    
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios2" value="option8">
+                            <label class="form-check-label" for="exampleRadios2">
+                            Literatura
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="option9">
+                            <label class="form-check-label" for="exampleRadios2">
+                            Ciencia
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios4" value="option10">
+                            <label class="form-check-label" for="exampleRadios1">
+                            Inglés
+                            </label>
+                        </div>
+                        </div>
+						  <div class="p-4" style="background-color:white">
+                        <h5 class="card-title">Valoración</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios1" value="option11">
+                            <label class="form-check-label" for="exampleRadios1">
+                            <p class="card-text">5 estrellas</p>
+                            </label>
+                        </div>
+                    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios2" value="option12">
+                            <label class="form-check-label" for="exampleRadios2">
+                            3 estrellas
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios3" value="option13">
+                            <label class="form-check-label" for="exampleRadios2">
+                            2 estrellas
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios4" value="option14">
+                            <label class="form-check-label" for="exampleRadios1">
+                            1 estrella
+                            </label>
+                        </div>
+                        </div>
+                  
+            </div>
+			</div>
+
+            
+                <div class="col-lg-9 col-md col-sm">
+
+                    <div class="container">
+                        <div class="row">
+                            {% for game in game2_dic %}
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="card-deck h-100">
+                                    <div class="card mb-4">
+                                        <img class="card-img-top img-fluid" src="{{url_for('static', filename='images/')}}{{game.game_image}}" alt="Card image cap">
+                                        <div class="card-img-overlay">
+                                            <h4 class="card-title text-light">{{ game.game_title }}</h4>
+                                            <a href="{{ url_for('game_lines') }}" class="btn btn-play play-edubot"><i class="fas fa-play"></i> Jugar </a></a>
+
+                                        </div>
+                                        <div class="card-body" align="left" style="position: relative;">
+                                            <p class="star-size">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                
+                                            </p>
+                                            <p class="card-text"> Descripción: {{game.game_description}}</p>
+                                            <p class="card-text"> Dificultad: {{game.game_dificulty}}</p>
+                                            <p class="card-text"> Categoría: {{game.game_category}}</p>
+                                        </div>                             
+                                    </div>                           
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            
+            
+            
+        </div>
+    </div> 
+</div>
+
+{% endblock %}

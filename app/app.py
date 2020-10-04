@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from functools import wraps
 from rank_dic import rank_dic 
 from game_dic import game_dic
+from game2_dic import game2_dic
 #from views.api_player import edubot
 from api.api_school import edubot
 import pyrebase
@@ -87,6 +88,19 @@ def contacto():
 @app.route('/FQAs')
 def fqas():
     return render_template('FQAs.html', the_title='FQAs')
+
+@app.route('/acerca')
+def acerca():
+    return render_template('about_us.html', the_title='Acerca de Nosotros')
+
+@app.route('/index3')
+def index3():
+    return render_template('index3.html', the_title='index3')
+
+@app.route('/cards')
+def cards():
+    return render_template('filters_base.html', game2_dic=game2_dic)
+
 
 @app.route('/formplayer', methods=['GET', 'POST'])
 def formplayer():

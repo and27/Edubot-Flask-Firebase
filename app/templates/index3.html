@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+
+	body{
+		overflow-x:hidden;
+	}
+
+</style>
+
+
+<div class="text-center pt-5 " style="min-height:80vh; padding-top:6vh">
+
+	<div class="oso">
+		<div class="bear-head"><img src="../static/images/head_bear.png"></div>
+		<div class="bear-body" style="padding-top: -40px;"><img src="../static/images/body_bear.png"></div>
+	</div>
+
+	
+	<h1 class="main-title mt-1 animate__animated animate__bounceInRight" style="animation-delay: 1s;">¿Qué vamos a aprender hoy?</h1>
+	<h4 class="text-white animate__animated animate__fadeInUp" style="animation-delay: 2s;">Busca un juego y comencemos a aprender</h4>
+
+	<div class="row pt-4 animate__animated animate__fadeInUp" style="animation-delay: 2s;"> 
+		<div class="col-md-6 offset-md-3 input-group mb-3 px-5" >
+			<input type="text" class="form-control" placeholder="Busca un juego o ingresa tu código" aria-label="Recipient's username" aria-describedby="basic-addon2">
+			<div class="input-group-append">
+				<button class="btn btn-info" type="button">Buscar</button>
+			</div>
+		</div>
+	</div>	
+
+    <div class="form-group row p-3">
+		<div class="dropdown col-md-2 offset-md-4">
+		  <button class="btn btn-info dropdown-toggle animate__animated animate__fadeInUp" style="animation-delay: 2s;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Materias
+		  </button>
+		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		    <a class="dropdown-item" href="#">Robotica</a>
+		    <a class="dropdown-item" href="#">Matemática</a>
+		    <a class="dropdown-item" href="#">Inglés</a>
+			<a class="dropdown-item" href="#">Educación emocional</a>
+		  </div>
+		</div>
+
+		<div class="dropdown col-md-2">
+		  <button class="btn btn-secondary dropdown-toggle animate__animated animate__fadeInUp" style="animation-delay: 2s;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Grado
+		  </button>
+		  <div class="dropdown-menu" aria-labelledby="dropdow nMenuButton">
+		    <a class="dropdown-item" href="#">2do </a>
+		    <a class="dropdown-item" href="#">3ro</a>
+		    <a class="dropdown-item" href="#">4to</a>
+			<a class="dropdown-item" href="#">5to</a>
+		  </div>
+		</div>
+	</div>
+</div>
+{% endblock %}
