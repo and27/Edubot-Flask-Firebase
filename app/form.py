@@ -42,3 +42,43 @@ class SignForm_school(FlaskForm):
     		render_kw={"class":"form-control", "placeholder": "Tipo"})
     #remember = BooleanField("Remember Me")
     #submit = SubmitField()
+
+class SignForm_player(FlaskForm):
+    name = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder":"Nombre y Apellido"})
+    age = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Edad"})
+    level = IntegerField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Grado de Educación"})
+    school = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Escuela"})
+
+class SignForm_game(FlaskForm):
+    name = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder":"Nombre del Juego"})
+    category = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Categoría"})
+    level = IntegerField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Nivel"})
+    rating = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Rating"})
+
+class SignForm_tutor(FlaskForm):
+    name = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder":"Nombre y Apellido"})
+    category = StringField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Edad"})
+    level = IntegerField("",
+            [DataRequired()],
+            render_kw={"class":"form-control", "placeholder": "Teléfono"})
+
