@@ -93,9 +93,9 @@ def fqas():
 def acerca():
     return render_template('about_us.html', the_title='Acerca de Nosotros')
 
-@app.route('/index3')
+@app.route('/animations')
 def index3():
-    return render_template('index3.html', the_title='index3')
+    return render_template('animations.html', the_title='Animations', largefooter=True)
 
 @app.route('/cards')
 def cards():
