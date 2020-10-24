@@ -144,38 +144,6 @@ padding-top:15%!important;
 }
 /*-----------End about us----------*/
 
-/*------- Bear Animations index3----*/
-
-.oso{
-  position: relative;
-  bottom: 0px;
-  height: 250px;
-}
-
-.bear-head img{
-  position: relative;
-  width: 8rem;
-  transform: rotate(-10deg);
-  animation: move-head 3s infinite;
-  transform-origin: bottom;
-}
-
-@keyframes move-head{
-  50%{
-      transform: rotate(10deg);
-  }
-}
-
-
-.bear-body img{
-  position: relative;
-  width: 8rem;
-  bottom: 6px;
-  left: 10px;
-}
-/*-------End Bear Animations index3----*/
-
-
 /*----------Planets animations------------*/
 @keyframes floating {
   from { transform: translate(0,  0px); }
@@ -208,7 +176,99 @@ padding-top:15%!important;
   margin-top: 5px;
 }
 
+
 /*------------End animations---------------*/
+
+
+/*-------------------- Animations.hmtl ----------------*/
+
+/*-------Oso-----*/
+.oso{
+  position: relative;
+  bottom: 0px;
+  height: 250px;
+}
+
+.bear-head img{
+  left: -35rem;
+  position: relative;
+  width: 8rem;
+  transform: rotate(-10deg);
+  animation: move-head 3s infinite;
+  transform-origin: bottom;
+}
+
+@keyframes move-head{
+  50%{
+      transform: rotate(10deg);
+  }
+}
+
+
+.bear-body img{
+  position: relative;
+  width: 8rem;
+  bottom: 6px;
+  left: -34.3rem;
+}
+
+/*------Planeta 1----------*/
+
+.planet1{
+  width: 8rem;
+  
+}
+
+.planeta img{
+  position: relative;
+  top: -8rem;
+  left: -15rem;
+  animation: spinning 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*----Planeta 2----*/
+
+.planet2{
+  width: 8rem;
+}
+
+.planeta2 img{
+  position: relative;
+  top: -16rem;
+  left: -2rem;
+  animation: scale 4s infinite linear, spin 2s; 
+  animation-timing-function: ease-in-out;
+
+}
+
+@keyframes spin { 
+  100% { 
+      transform: rotate(180deg);
+  } 
+}
+
+@keyframes scale {
+  100% {
+       transform: scaleX(2) scaleY(2);
+  }
+}
+
+/*-------------------------- End animations.html-----------------*/
+
+
+
 
 
 @media only screen and (max-width: 768px) {
