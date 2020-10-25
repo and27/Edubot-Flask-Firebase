@@ -94,13 +94,17 @@ def acerca():
     return render_template('about_us.html', the_title='Acerca de Nosotros')
 
 @app.route('/animations')
-def index3():
+def animations():
     return render_template('animations.html', the_title='Animations', largefooter=True)
 
 @app.route('/cards')
 def cards():
     return render_template('filters_base.html', game2_dic=game2_dic)
 
+
+@app.route('/store')
+def store():
+    return render_template('store.html', the_title='Tienda')
 
 @app.route('/formplayer', methods=['GET', 'POST'])
 def formplayer():
