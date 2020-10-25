@@ -1,0 +1,435 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+	.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: .5rem;
+}
+</style>
+
+<div class="contenedor text-center pb-5" style="min-height:85vh; padding-top:6vh">
+	
+		<div class="hd py-3 mb-3" style="background:url(static/images/banner_game.png) ">
+		<h1 class="tittle text-light"  >Tienda</h1>
+		<p class="text-light" >Adquiere extraordinarios accesorios</p>
+		</div>
+
+
+		<div class="row mt-5 mx-auto">
+			<!---- div para el membership -->
+			<div class="col-lg-7 col-md-5 col-sm-12 px-5">
+				<div class="card-membership card mt-3">
+					<div class="card-body pt-0 text-center pb-3 ">
+						<div class="row justify-content-center">
+							<div class="col-md-9 col py-3">
+								<h5>Adquiere tu Membresía Premium</h5>
+								<img src="../static/images/corona.png">
+								<br>
+								<a class="btn btn-edubot" href="#">Aquí</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<!-------- div para llaves y monedas ------>
+			<div class="col-sm-12 col-md-7 col-lg-5">
+			  <div class="container py-3">
+				<div class="mb-5 mt-4 d-flex flex-row align-items-start">
+					  <div class="pr-4">
+						<img src="../static/images/point.png" alt="llaves ganadas" class="img-fluid">
+					  </div>
+					  <div class="pr-5">
+						<div class="">
+							<h2>100</h2>
+						</div>
+						<div class="">
+							<h5 class="text-secondary" align="left">Puntos</h5>
+						</div>
+					  </div>
+					  <div class="pr-4">
+						<img src="../static/images/llave.png" alt="llaves ganadas" class="img-fluid">
+					  </div>
+					  <div class="pr-5">
+						  <h2>5</h2>
+						  <h5 class="text-secondary" align="left">Llaves</h5>
+					  </div>
+				</div>
+			  </div>               
+			</div>
+		</div>
+
+		<h2 class="subtitle mt-5">Categorías</h2>
+
+		<div class="container mt-3 mb-5">
+			<div class="row">
+				
+				<div class="col-6 offset-0 col-lg-2 offset-lg-1 col-md-3 offset-md-0 col-sm-4 offser-sm-0 mb-3">
+					<a href="#cat-camisetas">
+						<div class="card card-category py-2">
+							<img src="../static/images/store/camisetas.png" class="card-img-top" >
+						</div>
+					</a>
+					<div class="mt-2"><h5>Camisetas</h5></div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<a href="#cat-coronas">
+						<div class="card card-category py-2">
+							<img src="../static/images/store/coronas.png" class="card-img-top" >
+						</div>
+					</a>
+					<div class="mt-2"><h5>Coronas</h5></div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<a href="#cat-mochilas">
+						<div class="card card-category py-2">
+							<img src="../static/images/store/mochilas.png" class="card-img-top" >
+						</div>
+					</a>
+					<div class="mt-2"><h5>Mochilas</h5></div>
+				</div>
+				<div class="col-6 offset-0 col-lg-2 offset-lg-0 col-md-3 offset-md-0 col-sm-4 offset-sm-2 mb-3">
+					<a href="#cat-sombreros">
+						<div class="card card-category py-2">
+							<img src="../static/images/store/sombreros.png" class="card-img-top" >
+						</div>
+					</a>
+					<div class="mt-2"><h5>Sombreros</h5></div>
+				</div>
+				<div class="col-6 offset-3 col-lg-2 offset-lg-0 col-md-3 offset-md-5 col-sm-4 offset-sm-0 mb-3">
+					<a href="#cat-accesorios">
+						<div class="card card-category py-2">
+							<img src="../static/images/store/otros.png" class="card-img-top" >
+						</div>
+					</a>
+					<div class="mt-2"><h5>Otros Accesorios</h5></div>
+				</div>		
+			</div>
+		</div>
+
+		<h2 id="cat-camisetas" class="subtitle py-3">Camisetas</h2>
+
+		<div class="container mt-3 mb-5">
+			<div class="row mx-auto">
+				
+				<div class="col-6 offset-0 col-lg-2 offset-lg-1 col-md-3 offset-md-0 col-sm-4 offser-sm-0 mb-3">
+					
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/camiseta-fut.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/camiseta-mom.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/camiseta-run.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-0 col-lg-2 offset-lg-0 col-md-3 offset-md-0 col-sm-4 offset-sm-2 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/camiseta-futred.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-3 col-lg-2 offset-lg-0 col-md-3 offset-md-5 col-sm-4 offset-sm-0 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/camiseta-beach.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+		<h2 id="cat-coronas" class="subtitle py-3">Coronas</h2>
+
+		<div class="container mt-3 mb-5">
+			<div class="row mx-auto">
+				
+				<div class="col-6 offset-0 col-lg-2 offset-lg-1 col-md-3 offset-md-0 col-sm-4 offser-sm-0 mb-3">
+					
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/corona1.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Corona de la sabiduría</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/corona2.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Corona del matemático</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/corona3.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Corona Edubot</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-0 col-lg-2 offset-lg-0 col-md-3 offset-md-0 col-sm-4 offset-sm-2 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/corona4.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Corona de ...</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-3 col-lg-2 offset-lg-0 col-md-3 offset-md-5 col-sm-4 offset-sm-0 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/corona5.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Corona de ...</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+		<h2 id="cat-mochilas" class="subtitle py-3">Mochilas</h2>
+
+		<div class="container mt-3 mb-5">
+			<div class="row mx-auto">
+				
+				<div class="col-6 offset-0 col-lg-2 offset-lg-1 col-md-3 offset-md-0 col-sm-4 offser-sm-0 mb-3">
+					
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/mochila1.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/mochila2.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/mochila3.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-0 col-lg-2 offset-lg-0 col-md-3 offset-md-0 col-sm-4 offset-sm-2 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/mochila4.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-3 col-lg-2 offset-lg-0 col-md-3 offset-md-5 col-sm-4 offset-sm-0 mb-3">
+					<div class="card h-100" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/mochila5.png" alt="Card image cap">
+						<div class="card-body">
+						  <h6 class="card-title">Card title</h6>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+		<h2 id="cat-sombreros" class="subtitle py-3">Sombreros</h2>
+
+		<div class="container mt-3 mb-5">
+			<div class="row mx-auto">
+				
+				<div class="col-6 offset-0 col-lg-2 offset-lg-1 col-md-3 offset-md-0 col-sm-4 offser-sm-0 mb-3">
+					
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/hat1.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/hat2.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/hat3.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-0 col-lg-2 offset-lg-0 col-md-3 offset-md-0 col-sm-4 offset-sm-2 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/hat4.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-3 col-lg-2 offset-lg-0 col-md-3 offset-md-5 col-sm-4 offset-sm-0 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/hat5.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+		<h2 id="cat-accesorios" class="subtitle py-3">Otros accesorios</h2>
+
+		<div class="container mt-3 mb-5">
+			<div class="row mx-auto">
+				
+				<div class="col-6 offset-0 col-lg-2 offset-lg-1 col-md-3 offset-md-0 col-sm-4 offser-sm-0 mb-3">
+					
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/acc1.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/acc2.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3 col-sm-4 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/acc3.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-0 col-lg-2 offset-lg-0 col-md-3 offset-md-0 col-sm-4 offset-sm-2 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/acc4.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 offset-3 col-lg-2 offset-lg-0 col-md-3 offset-md-5 col-sm-4 offset-sm-0 mb-3">
+					<div class="card" style="width: 9rem;">
+						<img class="card-img-top mt-2" src="../static/images/store/acc5.png" alt="Card image cap">
+						<div class="card-body">
+						  <h5 class="card-title">Card title</h5>
+						  <p class="bold"> <span><img  src="../static/images/point.png" width="20" height="20"></span> 20 +  <span><img  src="../static/images/llave.png" width="25" height="25"> 1</span></p>
+
+						  <a href="#" class="btn btn-primary">Comprar</a>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+		
+
+ </div>
+{% endblock %}	
