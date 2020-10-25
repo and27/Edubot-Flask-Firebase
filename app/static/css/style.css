@@ -144,6 +144,24 @@ padding-top:15%!important;
 }
 /*-----------End about us----------*/
 
+
+.card-membership {
+  border-radius: 20px !important;
+  box-shadow: 2px 2px 5px 0px rgb(100, 108, 170);
+}
+
+.card-category {
+  border-radius: 20px !important;
+  box-shadow: 2px 2px 5px 0px rgb(100, 108, 170);
+  transition: 0.8s
+}
+
+.card-category:hover{
+  transform: scale(1.05)
+}
+
+
+
 /*----------Planets animations------------*/
 @keyframes floating {
   from { transform: translate(0,  0px); }
