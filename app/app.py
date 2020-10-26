@@ -27,6 +27,15 @@ firebaseConfig = {
     "measurementId": "G-TRPHQ88HGE"
 }
 
+player={
+    "name":"Pepito Pérez",
+    "school":"Unidad Educativa Ibarra",
+    "age":"7 años",
+    "grade":"Quinto de básica",
+    "nickname":"pep123",
+    "points":120,
+    "llaves":5,
+}
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
@@ -62,8 +71,18 @@ def juego(i):
 @app.route('/perfil')
 @login_required
 def perfil():
-    return render_template('perfil.html', the_title='Juego Líneas')
-    
+    return render_template('perfil_player_base.html', the_title='Juego Líneas', player=player)
+
+@app.route('/perfil_player')
+@login_required
+def perfil_player():
+    return render_template('perfil_player_base.html', the_title='Juego Líneas', player=player)
+
+@app.route('/perfil_tutor')
+#@login_required
+def perfil_tutor():
+    return render_template('perfil_tutor_base.html', the_title='Juego Líneas', player=player, users=True)
+     
 @app.route('/ranking')
 @login_required
 def ranking():
@@ -75,7 +94,7 @@ def game_lines():
 
 @app.route('/juegos')
 def juegos():
-    return render_template('filters.html', the_title='Búsqueda de Juegos')
+    return render_template('filters_base.html', the_title='Búsqueda de Juegos',  game2_dic=game2_dic)
     
 @app.route('/index2')
 def juegos2():

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <style>
+    .img-fluids{
+      max-width: 20%;
+    }
+    h5{
+      font-size:1.1rem;
+    }
+  </style>
+
+<div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
+	
+      <div class="hd py-3 mb-3 " style="background:url(static/images/banner_game.png) ">
+            <h1 class="tittle text-light">{{player.name}}</h1>
+        <p class="text-light">Conoce tu desempeño y puntos alcanzados</p>
+      </div>
+      <div class="row mt-4 mx-auto">
+        <div class="col-sm-12 col-md-5 col-lg-6">
+          <div class="container-fluid">
+            <div class="card mx-auto px-1 my-2 p-2" style="max-width:20rem; border-radius: 25px;">
+              <div class="card-body"> 
+                <div class="avatar mx-auto white">
+                  <img src="../static/images/avatar2.png" class="px-4 pb-4" alt="avatar de usuario" style="width:70%">
+                </div>
+                  <h2 class="card-title"><span class="badge badge-warning mx-auto mb-3 px-4 py-2"> {{player.nickname}} </span></h2>
+                  <h5 class="card-text text-left text-black">{{player.school}}</h5>
+                  <div class="py-2">
+                  <h5 class="card-text text-left text-secondary">{{player.grade}}</h5>
+                  <h5 class="card-text text-left text-secondary">{{player.age}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="col-sm-12 col-md-7 col-lg-5">
+          <div class="container">
+            <div class="mb-5 mt-4 d-flex flex-row align-items-start">
+                  <div class="pr-4">
+                    <img src="../static/images/point.png" alt="llaves ganadas" class="img-fluid">
+                  </div>
+                  <div class="pr-5">
+                    <div class="">
+                        <h2>{{player.points}}</h2>
+                    </div>
+                    <div class="">
+                        <h5 class="text-secondary" align="left">Puntos totales</h5>
+                    </div>
+                  </div>
+                  <div class="pr-4">
+                    <img src="../static/images/llave.png" alt="llaves ganadas" class="img-fluid">
+                  </div>
+                  <div class="pr-5">
+                      <h2>{{player.llaves}}</h2>
+                      <h5 class="text-secondary" align="left">Llaves</h5>
+
+                  </div>
+         
+            </div>
+    
+            <div class="card row p-4" style="border-radius:25px;">
+              <h4><span class="mx-auto px-4 pt-2 mb-3"> Logros </span></h4>
+              <hr>
+              <div align="left">
+                <img class="img-fluids" src="../static/images/medalla3.png" alt="medalla">
+                <img class="img-fluids" src="../static/images/medalla2.png" alt="medalla">
+                <img class="img-fluids" src="../static/images/medalla4.png" alt="medalla">
+              </div>
+            </div>
+            
+            
+          </div>               
+        </div>
+      </div>
+
+    <section class="bg-light p-5 my-5">
+    <div class="row">
+    <div class="col-md-7" >
+        <h1 class="card-title"><span class="badge badge-warning  mb-3 px-3 py-2"> Días Jugados</span></h1>
+        <img src="../static/images/dias.png" class="img-thumbnail">
+    </div>
+    
+    <div class="col-md-5 ">
+
+      <h2><span class="badge badge-warning"> Progreso </span></h2>
+
+      <div class="py-3 text-left">
+        <h5>Inglés</h5>
+        <!-- Turquoise -->
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width:30%">30%</div>
+        </div>
+      </div>
+      <div class="py-3 text-left">
+        <!-- Orange -->
+        <h5>Matemática</h5>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width:40%">40%</div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+    
+  </div>        
+{% endblock %}
+
+
+
+
+

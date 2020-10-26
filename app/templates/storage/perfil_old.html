@@ -1,16 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-   
 
   <style>
     .img-fluids{
       max-width: 20%;
     }
-
-
+    h5{
+      font-size:1.1rem;
+    }
   </style>
-
-
 
 <div class="contenedor text-center pb-5" style="min-height:80vh; padding-top:6vh">
 	
@@ -20,18 +18,18 @@
       </div>
 
 
-      <div class="row mt-5 mx-auto">
+      <div class="row mt-4 mx-auto">
         <div class="col-sm-12 col-md-5 col-lg-6">
           <div class="container-fluid">
-                <div class="card mx-auto" style="max-width: 20rem;padding: 1rem;border-radius: 25px;">
+            <div class="card mx-auto px-1 my-2 p-2" style="max-width:20rem; border-radius: 25px;">
               <div class="card-body"> 
                 <div class="avatar mx-auto white">
-                  <img src="../static/images/user.png" class="rounded-circle px-4 py-2" alt="avatar de usuario" style="width:70%">
+                  <img src="../static/images/avatar2.png" class="px-4 pb-4" alt="avatar de usuario" style="width:70%">
                 </div>
                   <h2 class="card-title"><span class="badge badge-warning mx-auto mb-3 px-3 py-2"> Player Name </span></h2>
-                  <p class="card-text text-left">Unidad Educativa Ibarra</p>
-                  <p class="card-text text-left"><b>Grado</b>: Quinto</p>
-                  <p class="card-text text-left"><b>Edad</b>: 7 años</p>
+                  <h5 class="card-text text-left text-black">Unidad Educativa Ibarra</h5>
+                  <h5 class="card-text text-left text-secondary">Quinto de básica</h5>
+                  <h5 class="card-text text-left text-secondary">7 años</h5>
               </div>
             </div>
           </div>  
@@ -62,14 +60,14 @@
          
             </div>
     
-            <div class="row ">
-              <h2><span class="badge badge-warning mx-auto px-4 py-2 mb-3"> Logros </span></h2>
+            <div class="card row p-4" style="border-radius:25px;">
+              <h4><span class="mx-auto px-4 pt-2 mb-3"> Logros </span></h4>
+              <hr>
               <div align="left">
                 <img class="img-fluids" src="../static/images/medalla3.png" alt="medalla">
                 <img class="img-fluids" src="../static/images/medalla2.png" alt="medalla">
                 <img class="img-fluids" src="../static/images/medalla4.png" alt="medalla">
               </div>
-              
             </div>
             
             

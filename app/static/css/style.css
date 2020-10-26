@@ -65,9 +65,16 @@ padding-top:15%!important;
 .btn-edubot{
   /*background-color: #0c92a6!important;*/
   background-color: #0da1ad!important;
-	color:white!important;
+  color:white!important;
+  border-radius:25px!important;
+  padding:0.75rem 3rem!important;
 }
 
+.btn-edubot:hover{
+  /*background-color: #0c92a6!important;*/
+  background-color: #0d7b85!important;
+	color:white!important;
+}
 .foot-color{
 	background: linear-gradient(59deg, #0ebcba, #0a6992);
 }
@@ -208,7 +215,7 @@ padding-top:15%!important;
 }
 
 .bear-head img{
-  left: -35rem;
+  
   position: relative;
   width: 8rem;
   transform: rotate(-10deg);
@@ -227,7 +234,7 @@ padding-top:15%!important;
   position: relative;
   width: 8rem;
   bottom: 6px;
-  left: -34.3rem;
+  
 }
 
 /*------Planeta 1----------*/

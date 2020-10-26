@@ -2,12 +2,21 @@
 .btn-edu-color{
 	color:white!important;
 }
+.edu-nav{
+	color:rgba(0,0,0,.3)!important;
+	
+}
+.edu-nav:hover{
+	color:#21bab8!important;
+	font-weight: bold;
+}
+
 </style>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5 nav-color">
 	  <!-- <a class="navbar-brand" href="#">Edubot</a> -->
 	  <a class="navbar-brand" href="{{url_for('index')}}">
-    	<img src="../static/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Edubot
+    	<img src="../static/images/logo.png" width="30" height="30" class="mr-2 d-inline-block align-top" alt=""> Edubot
       </a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -15,34 +24,49 @@
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    {% if not session.get('logged_in') %}
 	  
-  <ul class="navbar-nav mr-auto">
-	      <li class="nav-item">
-	        <a class="nav-link font-nav-edubot pl-3" href="{{ url_for('juegos') }}">Juegos</a>
+  	<ul class="navbar-nav mr-auto">
+	      <li class="nav-item ">
+	        <a class="nav-link font-nav-edubot pl-3 edu-nav" href="{{ url_for('juegos') }}"><i class="fas fa-puzzle-piece mr-2 "></i>Juegos</a>
+		  </li>
+		  <li class="nav-item">
+	        <a class="nav-link font-nav-edubot pl-3 edu-nav" href="{{ url_for('acerca') }}"><i class="fas fa-store mr-2"></i>Tienda</a>
+		  </li>
+		  <li class="nav-item">
+	        <a class="nav-link font-nav-edubot pl-3 edu-nav" href="{{ url_for('acerca') }}"><i class="fas fa-user-circle mr-2"></i>Acerca de</a>
+		  </li>
+		  <li class="nav-item">
+	        <a class="nav-link font-nav-edubot pl-3 edu-nav" href="{{ url_for('contacto') }}"><i class="fas fa-id-card mr-2"></i>Contacto</a>
 	      </li>
 	</ul>
 	    
 			
-		<ul class="navbar-nav">
-			<li class="nav-item px-2">
+	<ul class="navbar-nav">
+		<li class="nav-item px-2">
 	        <a class="nav-link font-nav-edubot" href="{{ url_for('auth.login') }}">Inicia sesión</a>
+	    </li>
+	    <li class="nav-item">
+	        <a class="nav-link font-nav-edubot btn btn-info btn-edu-color" href="{{ url_for('auth.register') }}">Únete gratis</a>
+		</li>
+	</ul>
+
+		{% else %}
+	<ul class="navbar-nav mr-auto">
+		 <li class="nav-item">
+		   <a class="nav-link pl-4 font-nav-edubot edu-nav" href="{{ url_for('juegos') }}"><i class="fas fa-puzzle-piece mr-2 "></i>Juegos</a>
+		 </li>
+		  <li class="nav-item">
+	        <a class="nav-link font-nav-edubot pl-4 edu-nav" href="{{ url_for('acerca') }}"><i class="fas fa-store mr-2 "></i>Tienda</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link font-nav-edubot btn btn-info btn-edu-color" href="{{ url_for('auth.register') }}">Únete gratis</a>
-	      </li>
-		  
-		</ul>
-		{% else %}
-		  <ul class="navbar-nav mr-auto">
-		 <li class="nav-item">
-	        <a class="nav-link pl-3 font-nav-edubot" href="{{ url_for('juegos') }}">Juegos</a>
-	      </li>
-	      <li class="nav-item px-2">
-	        <a class="nav-link font-nav-edubot" href="{{ url_for('ranking') }}">Ranking</a>
+	        <a class="nav-link font-nav-edubot pl-4 edu-nav" href="{{ url_for('ranking') }}"><i class="fas fa-sort-numeric-up mr-2 "></i>Ranking</a>
+		  </li>
+		  <li class="nav-item">
+	        <a class="nav-link font-nav-edubot pl-4 edu-nav" href="{{ url_for('acerca') }}"><i class="fas fa-user-circle mr-2"></i>Acerca de</a>
 	      </li>
 		  </ul>
 		  <ul class="navbar-nav">
-			<li class="nav-item">
-	        <a class="nav-link font-nav-edubot btn btn-info btn-edu-color" href="{{ url_for('perfil') }}">Perfil</a>
+			<li class="nav-item ">
+	        <a class="nav-link font-nav-edubot btn btn-info btn-edu-color mx-2 px-3" href="{{ url_for('perfil') }}"><i class="fas fa-user-circle mr-2 "></i></i>Perfil</a>
 	      </li>
 	      <li class="nav-item">
 	      	<a class="nav-link font-nav-edubot" href="{{ url_for('logout') }}">Cerrar Sesión</a>
