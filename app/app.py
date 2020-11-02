@@ -96,6 +96,10 @@ def game_lines():
 def juegos():
     return render_template('filters_base.html', the_title='Búsqueda de Juegos',  game2_dic=game2_dic)
     
+@app.route('/juegospag')
+def juegospag():
+    return render_template('pagination_games.html', the_title='Búsqueda de Juegos',  game2_dic=game2_dic)
+    
 @app.route('/index2')
 def juegos2():
     return render_template('index2.html', the_title='Búsqueda de Juegos')
