@@ -116,6 +116,10 @@ def fqas():
 def acerca():
     return render_template('about_us.html', the_title='Acerca de Nosotros')
 
+@app.route('/team')
+def team():
+    return render_template('our_team.html', the_title='Nuestro Equipo')
+
 @app.route('/animations')
 def animations():
     return render_template('animations.html', the_title='Animations', largefooter=True)
