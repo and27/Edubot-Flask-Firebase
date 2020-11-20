@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, session, url_for
+from flask_paginate import Pagination, get_page_args
 from functools import wraps
 from rank_dic import rank_dic 
 from game_dic import game_dic
@@ -98,7 +99,18 @@ def juegos():
     
 @app.route('/juegospag')
 def juegospag():
-    return render_template('pagination_games.html', the_title='Búsqueda de Juegos',  game2_dic=game2_dic)
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    total = len(game2_dic)
+    pagination_game = get_game(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap4')
+    return render_template('pagination_games.html',
+                           game2_dic=pagination_game,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
     
 @app.route('/index2')
 def juegos2():
